@@ -1,7 +1,7 @@
-// data.js - WITH CARD NUMBERS
+// data.js - VERIFIED & CORRECTED NAMES
 
 const setsData = [
-    // ===== MEGA EVOLUTION SERIES ===== (NEWEST FIRST)
+    // ===== MEGA EVOLUTION SERIES ===== (FUTURE/ESTIMATED)
     {
         id: "mega-02",
         name: {
@@ -81,7 +81,6 @@ const setsData = [
             { rarity: "Illustration Rare (IR)", rate: "1/12", percentage: "8.3%" },
             { rarity: "Ultra Rare (Full Art)", rate: "1/16", percentage: "6.25%" },
             { rarity: "Special Illustration Rare (SIR)", rate: "1/86", percentage: "1.16%" },
-            { rarity: "Black White Rare (BWR)", rate: "1/120", percentage: "0.83%", note: "Monochrome Alt Art" },
             { rarity: "Hyper Rare (Gold)", rate: "1/140", percentage: "0.71%" }
         ],
         topPulls: [
@@ -109,9 +108,7 @@ const setsData = [
             { rarity: "Masterball Reverse Holo", rate: "1/36", percentage: "2.7%", note: "Approx. 1 per Display" },
             { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.6%" },
             { rarity: "Illustration Rare (IR)", rate: "1/12", percentage: "8.3%" },
-            { rarity: "Ultra Rare (Full Art)", rate: "1/16", percentage: "6.25%" },
             { rarity: "Special Illustration Rare (SIR)", rate: "1/86", percentage: "1.16%" },
-            { rarity: "Black White Rare (BWR)", rate: "1/120", percentage: "0.83%", note: "Monochrome Alt Art" },
             { rarity: "Hyper Rare (Gold)", rate: "1/140", percentage: "0.71%" }
         ],
         topPulls: [
@@ -123,7 +120,7 @@ const setsData = [
     {
         id: "sv-10",
         name: {
-            "German": "Schicksalsrivalen",
+            "German": "Ewige Rivalen",
             "English": "Destined Rivals",
             "Japanese": "Glory of Team Rocket",
             "Korean": "Glory of Team Rocket"
@@ -151,7 +148,7 @@ const setsData = [
     {
         id: "sv-09",
         name: {
-            "German": "Gemeinsam Reisen",
+            "German": "Reisegefährten",
             "English": "Journey Together",
             "Japanese": "Battle Partners",
             "Korean": "Battle Partners"
@@ -218,51 +215,51 @@ const setsData = [
         symbolImage: "symbols/ss.png",
         color: "from-yellow-400 to-yellow-600",
         rates: [
-            { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.9%" },
+            { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.6%" },
             { rarity: "ACE SPEC", rate: "1/20", percentage: "5.0%" },
             { rarity: "Illustration Rare (IR)", rate: "1/13", percentage: "7.7%" },
-            { rarity: "Ultra Rare (Full Art)", rate: "1/15", percentage: "6.7%" },
-            { rarity: "Special Illustration Rare (SIR)", rate: "1/87", percentage: "1.15%" },
-            { rarity: "Hyper Rare (Gold)", rate: "1/188", percentage: "0.53%" }
+            { rarity: "Ultra Rare (Full Art)", rate: "1/15", percentage: "6.6%" },
+            { rarity: "Special Illustration Rare (SIR)", rate: "1/86", percentage: "1.16%" },
+            { rarity: "Hyper Rare (Gold)", rate: "1/140", percentage: "0.71%" }
         ],
         topPulls: [
-            { name: "Pikachu ex", rarity: "SIR", price: "€140.00", cardNumber: "238/191", image: "card-ss-pika.png" },
-            { name: "Latias ex", rarity: "SIR", price: "€45.00", cardNumber: "235/191", image: "card-ss-latias.png" },
-            { name: "Lisia's Appeal", rarity: "SIR", price: "€60.00", cardNumber: "242/191", image: "card-ss-lisia.png" }
+            { name: "Pikachu ex", rarity: "SIR", price: "€238.00", cardNumber: "238/191", image: "card-ss-pika.png" },
+            { name: "Latias ex", rarity: "SIR", price: "€48.00", cardNumber: "235/191", image: "card-ss-latias.png" },
+            { name: "Lisia's Appeal", rarity: "SIR", price: "€65.00", cardNumber: "242/191", image: "card-ss-lisia.png" }
         ]
     },
     {
         id: "sv-07",
         name: {
-            "German": "Strahlende Perle",
+            "German": "Stellarkrone",
             "English": "Stellar Crown",
             "Japanese": "Stellar Miracle",
             "Korean": "Stellar Miracle"
         },
         series: "Scarlet & Violet",
         releaseDate: "2024-09-13",
-        totalCards: "142+",
+        totalCards: "170+",
         symbol: "SC",
         symbolImage: "symbols/sc.png",
         color: "from-yellow-300 to-orange-400",
         rates: [
-            { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.7%" },
+            { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.6%" },
             { rarity: "ACE SPEC", rate: "1/20", percentage: "5.0%" },
-            { rarity: "Illustration Rare (IR)", rate: "1/12", percentage: "8.3%" },
-            { rarity: "Ultra Rare (Full Art)", rate: "1/15", percentage: "6.7%" },
-            { rarity: "Special Illustration Rare (SIR)", rate: "1/87", percentage: "1.15%" },
-            { rarity: "Hyper Rare (Gold)", rate: "1/188", percentage: "0.53%" }
+            { rarity: "Illustration Rare (IR)", rate: "1/13", percentage: "7.7%" },
+            { rarity: "Ultra Rare (Full Art)", rate: "1/15", percentage: "6.6%" },
+            { rarity: "Special Illustration Rare (SIR)", rate: "1/86", percentage: "1.16%" },
+            { rarity: "Hyper Rare (Gold)", rate: "1/120", percentage: "0.83%" }
         ],
         topPulls: [
+            { name: "Terapagos ex", rarity: "SIR", price: "€39.00", cardNumber: "170/142", image: "card-sc-tera.png" },
             { name: "Galarian Moltres ex", rarity: "SIR", price: "€42.00", cardNumber: "168/142", image: "card-sc-molt.png" },
-            { name: "Terapagos ex", rarity: "SIR", price: "€38.00", cardNumber: "165/142", image: "card-sc-tera.png" },
-            { name: "Dusknoir ex", rarity: "Ultra Rare", price: "€20.00", cardNumber: "155/142", image: "card-sc-dusk.png" }
+            { name: "Lacey", rarity: "SIR", price: "€32.00", cardNumber: "172/142", image: "card-sc-lacey.png" }
         ]
     },
     {
         id: "sv-065",
         name: {
-            "German": "Zwielicht-Maskerade",
+            "German": "Maskerade im Zwielicht",
             "English": "Twilight Masquerade",
             "Japanese": "Transformation Mask",
             "Korean": "Transformation Mask"
@@ -274,85 +271,86 @@ const setsData = [
         symbolImage: "symbols/tm.png",
         color: "from-green-600 to-purple-600",
         rates: [
-            { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.7%" },
+            { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.6%" },
             { rarity: "ACE SPEC", rate: "1/20", percentage: "5.0%" },
-            { rarity: "Illustration Rare (IR)", rate: "1/12", percentage: "8.3%" },
-            { rarity: "Ultra Rare (Full Art)", rate: "1/15", percentage: "6.7%" },
-            { rarity: "Special Illustration Rare (SIR)", rate: "1/87", percentage: "1.15%" },
-            { rarity: "Hyper Rare (Gold)", rate: "1/188", percentage: "0.53%" }
+            { rarity: "Illustration Rare (IR)", rate: "1/13", percentage: "7.7%" },
+            { rarity: "Ultra Rare (Full Art)", rate: "1/15", percentage: "6.6%" },
+            { rarity: "Special Illustration Rare (SIR)", rate: "1/86", percentage: "1.16%" },
+            { rarity: "Hyper Rare (Gold)", rate: "1/140", percentage: "0.71%" }
         ],
         topPulls: [
-            { name: "Ogerpon ex (Teal Mask)", rarity: "Hyper Rare", price: "€55.00", cardNumber: "226/167", image: "card-tm-oger.png" },
-            { name: "Bloodmoon Ursaluna ex", rarity: "SIR", price: "€40.00", cardNumber: "220/167", image: "card-tm-ursa.png" },
-            { name: "Perrin", rarity: "SIR", price: "€35.00", cardNumber: "215/167", image: "card-tm-perrin.png" }
+            { name: "Greninja ex", rarity: "SIR", price: "€217.00", cardNumber: "214/167", image: "card-tm-greninja.png" },
+            { name: "Carmine", rarity: "SIR", price: "€75.00", cardNumber: "217/167", image: "card-tm-carmine.png" },
+            { name: "Perrin", rarity: "SIR", price: "€38.00", cardNumber: "215/167", image: "card-tm-perrin.png" }
         ]
     },
     {
         id: "sv-06",
         name: {
-            "German": "Zeitenwende",
+            "German": "Gewalten der Zeit",
             "English": "Temporal Forces",
             "Japanese": "Wild Force / Cyber Judge",
             "Korean": "Wild Force / Cyber Judge"
         },
         series: "Scarlet & Violet",
         releaseDate: "2024-03-22",
-        totalCards: "162+",
+        totalCards: "218+",
         symbol: "TF",
         symbolImage: "symbols/tf.png",
         color: "from-purple-600 to-cyan-500",
         rates: [
-            { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.7%" },
+            { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.6%" },
             { rarity: "ACE SPEC", rate: "1/20", percentage: "5.0%" },
-            { rarity: "Illustration Rare (IR)", rate: "1/12", percentage: "8.3%" },
+            { rarity: "Illustration Rare (IR)", rate: "1/13", percentage: "7.7%" },
             { rarity: "Ultra Rare (Full Art)", rate: "1/16", percentage: "6.25%" },
-            { rarity: "Special Illustration Rare (SIR)", rate: "1/32", percentage: "3.1%" },
-            { rarity: "Hyper Rare (Gold)", rate: "1/52", percentage: "1.9%" }
+            { rarity: "Special Illustration Rare (SIR)", rate: "1/86", percentage: "1.16%" },
+            { rarity: "Hyper Rare (Gold)", rate: "1/139", percentage: "0.72%" }
         ],
         topPulls: [
-            { name: "Iron Thorns ex", rarity: "SIR", price: "€30.00", cardNumber: "215/162", image: "card-tf-thorns.png" },
-            { name: "Walking Wake ex", rarity: "SIR", price: "€28.00", cardNumber: "212/162", image: "card-tf-wake.png" },
-            { name: "Gouging Fire ex", rarity: "Ultra Rare", price: "€22.00", cardNumber: "200/162", image: "card-tf-fire.png" }
+            { name: "Iron Crown ex", rarity: "SIR", price: "€55.00", cardNumber: "206/162", image: "card-tf-crown.png" },
+            { name: "Raging Bolt ex", rarity: "SIR", price: "€52.00", cardNumber: "208/162", image: "card-tf-bolt.png" },
+            { name: "Walking Wake ex", rarity: "SIR", price: "€35.00", cardNumber: "205/162", image: "card-tf-wake.png" }
         ]
     },
     {
         id: "sv-05",
         name: {
-            "German": "Entwicklungen in Paldea",
+            "German": "Paldeas Schicksale",
             "English": "Paldean Fates",
             "Japanese": "Shiny Treasure ex",
             "Korean": "Shiny Treasure ex"
         },
         series: "Scarlet & Violet",
         releaseDate: "2024-01-26",
-        totalCards: "091+",
+        totalCards: "240+",
         symbol: "PF",
         symbolImage: "symbols/pf.png",
         color: "from-indigo-500 to-pink-500",
         rates: [
             { rarity: "Shiny Rare", rate: "1/3", percentage: "33.3%" },
-            { rarity: "Illustration Rare (IR)", rate: "1/8", percentage: "12.5%" },
-            { rarity: "Ultra Rare (Full Art)", rate: "1/12", percentage: "8.3%" },
-            { rarity: "Special Illustration Rare (SIR)", rate: "1/32", percentage: "3.1%" },
-            { rarity: "Hyper Rare (Gold)", rate: "1/52", percentage: "1.9%" }
+            { rarity: "Double Rare (ex)", rate: "1/9", percentage: "11.1%" },
+            { rarity: "Illustration Rare (IR)", rate: "1/12", percentage: "8.3%" },
+            { rarity: "Ultra Rare (Full Art)", rate: "1/19", percentage: "5.2%" },
+            { rarity: "Special Illustration Rare (SIR)", rate: "1/58", percentage: "1.7%" },
+            { rarity: "Hyper Rare (Gold)", rate: "1/92", percentage: "1.0%" }
         ],
         topPulls: [
-            { name: "Charizard ex (Shiny)", rarity: "SIR", price: "€75.00", cardNumber: "230/091", image: "card-pf-zard.png" },
-            { name: "Mew ex (Shiny)", rarity: "SIR", price: "€50.00", cardNumber: "225/091", image: "card-pf-mew.png" },
-            { name: "Mewtwo ex (Shiny)", rarity: "Ultra Rare", price: "€30.00", cardNumber: "215/091", image: "card-pf-mewtwo.png" }
+            { name: "Charizard ex (Shiny)", rarity: "SIR", price: "€115.00", cardNumber: "234/091", image: "card-pf-zard.png" },
+            { name: "Mew ex (Shiny)", rarity: "SIR", price: "€85.00", cardNumber: "232/091", image: "card-pf-mew.png" },
+            { name: "Gardevoir ex (Shiny)", rarity: "SIR", price: "€45.00", cardNumber: "233/091", image: "card-pf-garde.png" }
         ]
     },
     {
         id: "sv-04",
         name: {
-            "German": "Paradox-Rift",
+            "German": "Paradoxrift",
             "English": "Paradox Rift",
             "Japanese": "Raging Surf",
             "Korean": "Raging Surf"
         },
         series: "Scarlet & Violet",
         releaseDate: "2023-11-03",
-        totalCards: "182+",
+        totalCards: "266+",
         symbol: "PR",
         symbolImage: "symbols/pr.png",
         color: "from-teal-500 to-blue-700",
@@ -360,13 +358,13 @@ const setsData = [
             { rarity: "Double Rare (ex)", rate: "1/7", percentage: "14.3%" },
             { rarity: "Illustration Rare (IR)", rate: "1/12", percentage: "8.3%" },
             { rarity: "Ultra Rare (Full Art)", rate: "1/16", percentage: "6.25%" },
-            { rarity: "Special Illustration Rare (SIR)", rate: "1/32", percentage: "3.1%" },
-            { rarity: "Hyper Rare (Gold)", rate: "1/52", percentage: "1.9%" }
+            { rarity: "Special Illustration Rare (SIR)", rate: "1/46", percentage: "2.1%" },
+            { rarity: "Hyper Rare (Gold)", rate: "1/75", percentage: "1.3%" }
         ],
         topPulls: [
-            { name: "Roaring Moon ex", rarity: "SIR", price: "€35.00", cardNumber: "251/182", image: "card-pr-moon.png" },
-            { name: "Iron Valiant ex", rarity: "SIR", price: "€32.00", cardNumber: "248/182", image: "card-pr-valiant.png" },
-            { name: "Gholdengo ex", rarity: "Ultra Rare", price: "€15.00", cardNumber: "230/182", image: "card-pr-ghol.png" }
+            { name: "Roaring Moon ex", rarity: "SIR", price: "€58.00", cardNumber: "251/182", image: "card-pr-moon.png" },
+            { name: "Iron Valiant ex", rarity: "SIR", price: "€32.00", cardNumber: "249/182", image: "card-pr-valiant.png" },
+            { name: "Ghoudengo ex", rarity: "SIR", price: "€28.00", cardNumber: "252/182", image: "card-pr-ghol.png" }
         ]
     },
     {
@@ -379,7 +377,7 @@ const setsData = [
         },
         series: "Scarlet & Violet",
         releaseDate: "2023-09-22",
-        totalCards: "165+142",
+        totalCards: "165+207",
         symbol: "MEW",
         symbolImage: "symbols/mew.png",
         color: "from-pink-500 to-purple-600",
@@ -391,10 +389,10 @@ const setsData = [
             { rarity: "Hyper Rare (Gold)", rate: "1/52", percentage: "1.9%" }
         ],
         topPulls: [
-            { name: "Charizard ex", rarity: "SIR", price: "€110.00", cardNumber: "199/165", image: "card-151-zard.png" },
-            { name: "Blastoise ex", rarity: "SIR", price: "€45.00", cardNumber: "196/165", image: "card-151-blast.png" },
-            { name: "Venusaur ex", rarity: "SIR", price: "€40.00", cardNumber: "195/165", image: "card-151-venu.png" },
-            { name: "Erika's Invitation", rarity: "SIR", price: "€35.00", cardNumber: "203/165", image: "card-151-erika.png" }
+            { name: "Charizard ex", rarity: "SIR", price: "€236.00", cardNumber: "199/165", image: "card-151-zard.png" },
+            { name: "Blastoise ex", rarity: "SIR", price: "€45.00", cardNumber: "200/165", image: "card-151-blast.png" },
+            { name: "Venusaur ex", rarity: "SIR", price: "€42.00", cardNumber: "198/165", image: "card-151-venu.png" },
+            { name: "Zapdos ex", rarity: "SIR", price: "€38.00", cardNumber: "202/165", image: "card-151-zapdos.png" }
         ]
     },
     {
@@ -407,7 +405,7 @@ const setsData = [
         },
         series: "Scarlet & Violet",
         releaseDate: "2023-08-11",
-        totalCards: "190+",
+        totalCards: "230+",
         symbol: "OF",
         symbolImage: "symbols/of.png",
         color: "from-red-700 to-slate-900",
@@ -419,22 +417,22 @@ const setsData = [
             { rarity: "Hyper Rare (Gold)", rate: "1/52", percentage: "1.9%" }
         ],
         topPulls: [
-            { name: "Charizard ex (Dark Tera)", rarity: "SIR", price: "€60.00", cardNumber: "223/197", image: "card-of-zard.png" },
-            { name: "Pidgeot ex", rarity: "SIR", price: "€15.00", cardNumber: "220/197", image: "card-of-pidgeot.png" },
-            { name: "Ninetales", rarity: "IR", price: "€12.00", cardNumber: "200/197", image: "card-of-ninetales.png" }
+            { name: "Charizard ex (Dark Tera)", rarity: "SIR", price: "€52.00", cardNumber: "223/197", image: "card-of-zard.png" },
+            { name: "Pidgeot ex", rarity: "SIR", price: "€12.00", cardNumber: "225/197", image: "card-of-pidgeot.png" },
+            { name: "Charizard ex", rarity: "Ultra Rare", price: "€18.00", cardNumber: "215/197", image: "card-of-zard-fa.png" }
         ]
     },
     {
         id: "sv-02",
         name: {
-            "German": "Paldea-Entwicklung",
+            "German": "Entwicklungen in Paldea",
             "English": "Paldea Evolved",
             "Japanese": "Clay Burst / Snow Hazard",
             "Korean": "Clay Burst / Snow Hazard"
         },
         series: "Scarlet & Violet",
         releaseDate: "2023-06-09",
-        totalCards: "193+",
+        totalCards: "279+",
         symbol: "PE",
         symbolImage: "symbols/pe.png",
         color: "from-blue-500 to-orange-500",
@@ -446,9 +444,9 @@ const setsData = [
             { rarity: "Hyper Rare (Gold)", rate: "1/52", percentage: "1.9%" }
         ],
         topPulls: [
-            { name: "Iono", rarity: "SIR", price: "€90.00", cardNumber: "269/193", image: "card-pe-iono.png" },
-            { name: "Rika", rarity: "SIR", price: "€35.00", cardNumber: "265/193", image: "card-pe-rika.png" },
-            { name: "Gardevoir ex", rarity: "SIR", price: "€28.00", cardNumber: "245/193", image: "card-pe-garde.png" }
+            { name: "Magikarp", rarity: "IR", price: "€157.00", cardNumber: "203/193", image: "card-pe-karp.png" },
+            { name: "Iono", rarity: "SIR", price: "€72.00", cardNumber: "269/193", image: "card-pe-iono.png" },
+            { name: "Chien-Pao ex", rarity: "SIR", price: "€28.00", cardNumber: "261/193", image: "card-pe-chien.png" }
         ]
     },
     {
@@ -473,9 +471,9 @@ const setsData = [
             { rarity: "Hyper Rare (Gold)", rate: "1/52", percentage: "1.9%" }
         ],
         topPulls: [
-            { name: "Miraidon ex", rarity: "SIR", price: "€55.00", cardNumber: "247/198", image: "card-sv1-miraidon.png" },
-            { name: "Koraidon ex", rarity: "SIR", price: "€50.00", cardNumber: "245/198", image: "card-sv1-koraidon.png" },
-            { name: "Meowscarada ex", rarity: "Ultra Rare", price: "€18.00", cardNumber: "225/198", image: "card-sv1-meow.png" }
+            { name: "Miriam", rarity: "SIR", price: "€35.00", cardNumber: "251/198", image: "card-sv1-miriam.png" },
+            { name: "Miraidon ex", rarity: "SIR", price: "€28.00", cardNumber: "244/198", image: "card-sv1-miraidon.png" },
+            { name: "Gardevoir ex", rarity: "SIR", price: "€22.00", cardNumber: "245/198", image: "card-sv1-garde.png" }
         ]
     },
 
@@ -483,29 +481,28 @@ const setsData = [
     {
         id: "swsh-12.5",
         name: {
-            "German": "Kronenglanz",
+            "German": "Zenit der Könige",
             "English": "Crown Zenith",
             "Japanese": "VSTAR Universe",
             "Korean": "VSTAR Universe"
         },
         series: "Sword & Shield",
         releaseDate: "2023-01-20",
-        totalCards: "159+",
+        totalCards: "160+",
         symbol: "CRZ",
         symbolImage: "symbols/crz.png",
         color: "from-yellow-400 to-purple-600",
         rates: [
-            { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
-            { rarity: "Ultra Rare (V)", rate: "1/6", percentage: "16.7%" },
+            { rarity: "Holo Rare", rate: "1/2", percentage: "50%" },
+            { rarity: "Ultra Rare (V)", rate: "1/7", percentage: "14.3%" },
             { rarity: "Galarian Gallery", rate: "1/3", percentage: "33.3%" },
-            { rarity: "Full Art (VSTAR)", rate: "1/10", percentage: "10%" },
-            { rarity: "Alternate Art", rate: "1/36", percentage: "2.8%" },
+            { rarity: "Radiant Rare", rate: "1/20", percentage: "5.0%" },
             { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
         ],
         topPulls: [
-            { name: "Charizard VSTAR", rarity: "Secret Rare", price: "€140.00", cardNumber: "174/159", image: "card-crz-zard.png" },
-            { name: "Mewtwo VSTAR", rarity: "Secret Rare", price: "€55.00", cardNumber: "170/159", image: "card-crz-mewtwo.png" },
-            { name: "Pikachu VMAX", rarity: "Galarian Gallery", price: "€50.00", cardNumber: "GG25/GG70", image: "card-crz-pika.png" }
+            { name: "Giratina VSTAR", rarity: "Gold Secret", price: "€95.00", cardNumber: "GG69/GG70", image: "card-crz-gira.png" },
+            { name: "Arceus VSTAR", rarity: "Gold Secret", price: "€75.00", cardNumber: "GG70/GG70", image: "card-crz-arc.png" },
+            { name: "Mewtwo VSTAR", rarity: "Galarian Gallery", price: "€60.00", cardNumber: "GG44/GG70", image: "card-crz-mewtwo.png" }
         ]
     },
     {
@@ -518,23 +515,21 @@ const setsData = [
         },
         series: "Sword & Shield",
         releaseDate: "2022-11-11",
-        totalCards: "195+",
+        totalCards: "215+",
         symbol: "SIT",
         symbolImage: "symbols/sit.png",
         color: "from-slate-400 to-blue-700",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
             { rarity: "Ultra Rare (V)", rate: "1/7", percentage: "14.3%" },
-            { rarity: "Full Art (VSTAR)", rate: "1/10", percentage: "10%" },
-            { rarity: "Trainer Gallery", rate: "1/4", percentage: "25%" },
-            { rarity: "Alternate Art", rate: "1/36", percentage: "2.8%" },
-            { rarity: "Secret Rare (Rainbow)", rate: "1/24", percentage: "4.2%" },
-            { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
+            { rarity: "Trainer Gallery", rate: "1/8", percentage: "12.5%" },
+            { rarity: "Alternate Art", rate: "1/100", percentage: "1.0%" },
+            { rarity: "Secret Rare (Rainbow/Gold)", rate: "1/40", percentage: "2.5%" }
         ],
         topPulls: [
-            { name: "Lugia VSTAR", rarity: "Secret Rare", price: "€85.00", cardNumber: "220/195", image: "card-sit-lugia.png" },
-            { name: "Serperior VSTAR", rarity: "Secret Rare", price: "€50.00", cardNumber: "215/195", image: "card-sit-serp.png" },
-            { name: "Mawile V", rarity: "Alternate Art", price: "€45.00", cardNumber: "211/195", image: "card-sit-maw.png" }
+            { name: "Lugia V", rarity: "Alternate Art", price: "€165.00", cardNumber: "186/195", image: "card-sit-lugia.png" },
+            { name: "Regidrago V", rarity: "Alternate Art", price: "€18.00", cardNumber: "184/195", image: "card-sit-regi.png" },
+            { name: "Unown V", rarity: "Alternate Art", price: "€25.00", cardNumber: "177/195", image: "card-sit-unown.png" }
         ]
     },
     {
@@ -547,23 +542,21 @@ const setsData = [
         },
         series: "Sword & Shield",
         releaseDate: "2022-09-09",
-        totalCards: "196+",
+        totalCards: "217+",
         symbol: "LOR",
         symbolImage: "symbols/lor.png",
         color: "from-indigo-600 to-gray-800",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
             { rarity: "Ultra Rare (V)", rate: "1/7", percentage: "14.3%" },
-            { rarity: "Full Art (VSTAR)", rate: "1/10", percentage: "10%" },
-            { rarity: "Trainer Gallery", rate: "1/4", percentage: "25%" },
-            { rarity: "Alternate Art", rate: "1/36", percentage: "2.8%" },
-            { rarity: "Secret Rare (Rainbow)", rate: "1/24", percentage: "4.2%" },
-            { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
+            { rarity: "Trainer Gallery", rate: "1/8", percentage: "12.5%" },
+            { rarity: "Alternate Art", rate: "1/100", percentage: "1.0%" },
+            { rarity: "Secret Rare (Rainbow/Gold)", rate: "1/40", percentage: "2.5%" }
         ],
         topPulls: [
-            { name: "Giratina VSTAR", rarity: "Alternate Art", price: "€180.00", cardNumber: "247/196", image: "card-lor-gira.png" },
-            { name: "Aerodactyl V", rarity: "Alternate Art", price: "€95.00", cardNumber: "242/196", image: "card-lor-aero.png" },
-            { name: "Enamorus V", rarity: "Trainer Gallery", price: "€35.00", cardNumber: "TG20/TG30", image: "card-lor-enam.png" }
+            { name: "Giratina V", rarity: "Alternate Art", price: "€460.00", cardNumber: "186/196", image: "card-lor-gira.png" },
+            { name: "Aerodactyl V", rarity: "Alternate Art", price: "€95.00", cardNumber: "180/196", image: "card-lor-aero.png" },
+            { name: "Pikachu VMAX", rarity: "Trainer Gallery", price: "€45.00", cardNumber: "TG17/TG30", image: "card-lor-pika.png" }
         ]
     },
     {
@@ -576,23 +569,21 @@ const setsData = [
         },
         series: "Sword & Shield",
         releaseDate: "2022-05-27",
-        totalCards: "189+",
+        totalCards: "216+",
         symbol: "ASR",
         symbolImage: "symbols/asr.png",
         color: "from-purple-500 to-pink-400",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
             { rarity: "Ultra Rare (V)", rate: "1/7", percentage: "14.3%" },
-            { rarity: "Full Art (VSTAR)", rate: "1/10", percentage: "10%" },
-            { rarity: "Trainer Gallery", rate: "1/4", percentage: "25%" },
-            { rarity: "Alternate Art", rate: "1/36", percentage: "2.8%" },
-            { rarity: "Secret Rare (Rainbow)", rate: "1/24", percentage: "4.2%" },
-            { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
+            { rarity: "Trainer Gallery", rate: "1/8", percentage: "12.5%" },
+            { rarity: "Alternate Art", rate: "1/100", percentage: "1.0%" },
+            { rarity: "Secret Rare", rate: "1/40", percentage: "2.5%" }
         ],
         topPulls: [
-            { name: "Machamp V", rarity: "Alternate Art", price: "€110.00", cardNumber: "225/189", image: "card-asr-machamp.png" },
-            { name: "Origin Forme Palkia VSTAR", rarity: "Secret Rare", price: "€50.00", cardNumber: "215/189", image: "card-asr-palkia.png" },
-            { name: "Hisuian Typhlosion V", rarity: "Trainer Gallery", price: "€35.00", cardNumber: "TG18/TG30", image: "card-asr-typh.png" }
+            { name: "Machamp V", rarity: "Alternate Art", price: "€115.00", cardNumber: "172/189", image: "card-asr-machamp.png" },
+            { name: "Origin Forme Palkia V", rarity: "Alternate Art", price: "€35.00", cardNumber: "167/189", image: "card-asr-palkia.png" },
+            { name: "Starmie V", rarity: "Trainer Gallery", price: "€38.00", cardNumber: "TG13/TG30", image: "card-asr-starmie.png" }
         ]
     },
     {
@@ -612,72 +603,67 @@ const setsData = [
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
             { rarity: "Ultra Rare (V)", rate: "1/7", percentage: "14.3%" },
-            { rarity: "Full Art (VSTAR)", rate: "1/10", percentage: "10%" },
-            { rarity: "Trainer Gallery", rate: "1/4", percentage: "25%" },
-            { rarity: "Alternate Art", rate: "1/36", percentage: "2.8%" },
-            { rarity: "Secret Rare (Rainbow)", rate: "1/24", percentage: "4.2%" },
-            { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
+            { rarity: "Trainer Gallery", rate: "1/8", percentage: "12.5%" },
+            { rarity: "Alternate Art", rate: "1/100", percentage: "1.0%" },
+            { rarity: "Secret Rare", rate: "1/40", percentage: "2.5%" }
         ],
         topPulls: [
-            { name: "Charizard V", rarity: "Alternate Art", price: "€320.00", cardNumber: "218/172", image: "card-brs-zard.png" },
-            { name: "Arceus VSTAR", rarity: "Secret Rare", price: "€65.00", cardNumber: "184/172", image: "card-brs-arc.png" },
-            { name: "Marnie", rarity: "Trainer Gallery", price: "€55.00", cardNumber: "TG20/TG30", image: "card-brs-marnie-tg.png" }
+            { name: "Charizard V", rarity: "Alternate Art", price: "€135.00", cardNumber: "154/172", image: "card-brs-zard.png" },
+            { name: "Arceus V", rarity: "Alternate Art", price: "€35.00", cardNumber: "154/172", image: "card-brs-arc.png" },
+            { name: "Charizard VSTAR", rarity: "Rainbow Secret", price: "€60.00", cardNumber: "174/172", image: "card-brs-zard-rain.png" }
         ]
     },
     {
         id: "swsh-08",
         name: {
-            "German": "Fusions-Angriff",
+            "German": "Fusionsangriff",
             "English": "Fusion Strike",
             "Japanese": "Fusion Arts",
             "Korean": "Fusion Arts"
         },
         series: "Sword & Shield",
         releaseDate: "2021-11-12",
-        totalCards: "264+",
+        totalCards: "284+",
         symbol: "FST",
         symbolImage: "symbols/fst.png",
         color: "from-purple-600 to-orange-500",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
             { rarity: "Ultra Rare (V)", rate: "1/7", percentage: "14.3%" },
-            { rarity: "Full Art (VMAX)", rate: "1/10", percentage: "10%" },
-            { rarity: "Alternate Art", rate: "1/36", percentage: "2.8%" },
-            { rarity: "Secret Rare (Rainbow)", rate: "1/24", percentage: "4.2%" },
-            { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
+            { rarity: "Alternate Art", rate: "1/120", percentage: "0.8%" },
+            { rarity: "Secret Rare (Rainbow/Gold)", rate: "1/36", percentage: "2.8%" }
         ],
         topPulls: [
-            { name: "Mew VMAX", rarity: "Alternate Art", price: "€120.00", cardNumber: "315/264", image: "card-fst-mew.png" },
-            { name: "Gengar VMAX", rarity: "Alternate Art", price: "€95.00", cardNumber: "310/264", image: "card-fst-gengar.png" },
-            { name: "Espeon V", rarity: "Alternate Art", price: "€70.00", cardNumber: "306/264", image: "card-fst-esp.png" }
+            { name: "Gengar VMAX", rarity: "Alternate Art", price: "€260.00", cardNumber: "271/264", image: "card-fst-gengar.png" },
+            { name: "Espeon VMAX", rarity: "Alternate Art", price: "€210.00", cardNumber: "270/264", image: "card-fst-esp.png" },
+            { name: "Mew VMAX", rarity: "Alternate Art", price: "€85.00", cardNumber: "269/264", image: "card-fst-mew.png" }
         ]
     },
     {
         id: "swsh-07",
         name: {
-            "German": "Entwicklungswunder",
+            "German": "Drachenwandel",
             "English": "Evolving Skies",
             "Japanese": "Eevee Heroes / Blue Sky Stream",
             "Korean": "Eevee Heroes / Blue Sky Stream"
         },
         series: "Sword & Shield",
         releaseDate: "2021-08-27",
-        totalCards: "203+",
+        totalCards: "237+",
         symbol: "EVS",
         symbolImage: "symbols/evs.png",
         color: "from-cyan-400 to-pink-500",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
             { rarity: "Ultra Rare (V)", rate: "1/7", percentage: "14.3%" },
-            { rarity: "Full Art (VMAX)", rate: "1/10", percentage: "10%" },
-            { rarity: "Alternate Art", rate: "1/36", percentage: "2.8%" },
-            { rarity: "Secret Rare (Rainbow)", rate: "1/24", percentage: "4.2%" },
-            { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
+            { rarity: "Full Art", rate: "1/40", percentage: "2.5%" },
+            { rarity: "Alternate Art VMAX", rate: "1/280", percentage: "0.35%" },
+            { rarity: "Secret Rare (Rainbow/Gold)", rate: "1/50", percentage: "2.0%" }
         ],
         topPulls: [
-            { name: "Umbreon VMAX", rarity: "Alternate Art", price: "€420.00", cardNumber: "215/203", image: "card-evs-umbre.png" },
-            { name: "Rayquaza VMAX", rarity: "Alternate Art", price: "€280.00", cardNumber: "218/203", image: "card-evs-ray.png" },
-            { name: "Sylveon VMAX", rarity: "Secret Rare", price: "€65.00", cardNumber: "212/203", image: "card-evs-sylv.png" }
+            { name: "Umbreon VMAX", rarity: "Alternate Art", price: "€750.00", cardNumber: "215/203", image: "card-evs-umbre.png" },
+            { name: "Rayquaza VMAX", rarity: "Alternate Art", price: "€320.00", cardNumber: "218/203", image: "card-evs-ray.png" },
+            { name: "Leafeon VMAX", rarity: "Alternate Art", price: "€220.00", cardNumber: "205/203", image: "card-evs-leaf.png" }
         ]
     },
     {
@@ -697,15 +683,13 @@ const setsData = [
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
             { rarity: "Ultra Rare (V)", rate: "1/7", percentage: "14.3%" },
-            { rarity: "Full Art (VMAX)", rate: "1/10", percentage: "10%" },
-            { rarity: "Alternate Art", rate: "1/36", percentage: "2.8%" },
-            { rarity: "Secret Rare (Rainbow)", rate: "1/24", percentage: "4.2%" },
-            { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
+            { rarity: "Alternate Art", rate: "1/100", percentage: "1.0%" },
+            { rarity: "Secret Rare (Rainbow/Gold)", rate: "1/48", percentage: "2.1%" }
         ],
         topPulls: [
-            { name: "Shadow Rider Calyrex VMAX", rarity: "Secret Rare", price: "€80.00", cardNumber: "220/198", image: "card-cre-caly.png" },
-            { name: "Blaziken VMAX", rarity: "Alternate Art", price: "€65.00", cardNumber: "215/198", image: "card-cre-blazi.png" },
-            { name: "Zeraora V", rarity: "Alternate Art", price: "€55.00", cardNumber: "210/198", image: "card-cre-zera.png" }
+            { name: "Blaziken VMAX", rarity: "Alternate Art", price: "€210.00", cardNumber: "201/198", image: "card-cre-blazi.png" },
+            { name: "Galarian Moltres V", rarity: "Alternate Art", price: "€135.00", cardNumber: "177/198", image: "card-cre-molt.png" },
+            { name: "Shadow Rider Calyrex VMAX", rarity: "Alternate Art", price: "€75.00", cardNumber: "205/198", image: "card-cre-caly.png" }
         ]
     },
     {
@@ -725,15 +709,13 @@ const setsData = [
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
             { rarity: "Ultra Rare (V)", rate: "1/7", percentage: "14.3%" },
-            { rarity: "Full Art (VMAX)", rate: "1/10", percentage: "10%" },
-            { rarity: "Alternate Art", rate: "1/36", percentage: "2.8%" },
-            { rarity: "Secret Rare (Rainbow)", rate: "1/24", percentage: "4.2%" },
-            { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
+            { rarity: "Alternate Art", rate: "1/100", percentage: "1.0%" },
+            { rarity: "Secret Rare (Rainbow)", rate: "1/48", percentage: "2.1%" }
         ],
         topPulls: [
-            { name: "Tyranitar V", rarity: "Alternate Art", price: "€75.00", cardNumber: "205/163", image: "card-bst-ttar.png" },
-            { name: "Urshifu VMAX", rarity: "Secret Rare", price: "€55.00", cardNumber: "193/163", image: "card-bst-urshi.png" },
-            { name: "Empoleon V", rarity: "Alternate Art", price: "€45.00", cardNumber: "198/163", image: "card-bst-emp.png" }
+            { name: "Tyranitar V", rarity: "Alternate Art", price: "€115.00", cardNumber: "155/163", image: "card-bst-ttar.png" },
+            { name: "Urshifu VMAX (Rapid Strike)", rarity: "Alternate Art", price: "€55.00", cardNumber: "170/163", image: "card-bst-urshi.png" },
+            { name: "Empoleon V", rarity: "Alternate Art", price: "€35.00", cardNumber: "146/163", image: "card-bst-emp.png" }
         ]
     },
     {
@@ -757,9 +739,9 @@ const setsData = [
             { rarity: "Secret Rare (Gold)", rate: "1/52", percentage: "1.9%" }
         ],
         topPulls: [
-            { name: "Charizard VMAX (Shiny)", rarity: "Shiny VMAX", price: "€280.00", cardNumber: "SV107/SV122", image: "card-shf-zard.png" },
-            { name: "Skyla", rarity: "Full Art", price: "€65.00", cardNumber: "072/072", image: "card-shf-skyla.png" },
-            { name: "Suicune (Shiny)", rarity: "Amazing Rare", price: "€35.00", cardNumber: "SV059/SV122", image: "card-shf-suicune.png" }
+            { name: "Charizard VMAX (Shiny)", rarity: "Shiny VMAX", price: "€95.00", cardNumber: "SV107/SV122", image: "card-shf-zard.png" },
+            { name: "Suicune (Shiny)", rarity: "Shiny Rare", price: "€15.00", cardNumber: "SV022/SV122", image: "card-shf-suicune.png" },
+            { name: "Skyla", rarity: "Full Art", price: "€10.00", cardNumber: "072/072", image: "card-shf-skyla.png" }
         ]
     },
     {
@@ -779,21 +761,20 @@ const setsData = [
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
             { rarity: "Ultra Rare (V)", rate: "1/8", percentage: "12.5%" },
-            { rarity: "Full Art (VMAX)", rate: "1/11", percentage: "9.1%" },
-            { rarity: "Amazing Rare", rate: "1/30", percentage: "3.3%" },
-            { rarity: "Secret Rare (Rainbow)", rate: "1/24", percentage: "4.2%" },
+            { rarity: "Amazing Rare", rate: "1/18", percentage: "5.5%" },
+            { rarity: "Secret Rare (Rainbow)", rate: "1/40", percentage: "2.5%" },
             { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
         ],
         topPulls: [
-            { name: "Pikachu VMAX", rarity: "Secret Rare", price: "€120.00", cardNumber: "188/185", image: "card-viv-pika.png" },
-            { name: "Charizard (Amazing Rare)", rarity: "Amazing Rare", price: "€45.00", cardNumber: "020/185", image: "card-viv-zard-ar.png" },
-            { name: "Leon", rarity: "Full Art", price: "€40.00", cardNumber: "182/185", image: "card-viv-leon.png" }
+            { name: "Pikachu VMAX", rarity: "Rainbow Rare", price: "€110.00", cardNumber: "188/185", image: "card-viv-pika.png" },
+            { name: "Pikachu V", rarity: "Full Art", price: "€15.00", cardNumber: "170/185", image: "card-viv-pika-fa.png" },
+            { name: "Rayquaza", rarity: "Amazing Rare", price: "€8.00", cardNumber: "138/185", image: "card-viv-ray.png" }
         ]
     },
     {
         id: "swsh-03",
         name: {
-            "German": "Fluch des Mondes",
+            "German": "Flammende Finsternis",
             "English": "Darkness Ablaze",
             "Japanese": "Explosive Walker",
             "Korean": "Explosive Walker"
@@ -808,19 +789,19 @@ const setsData = [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
             { rarity: "Ultra Rare (V)", rate: "1/8", percentage: "12.5%" },
             { rarity: "Full Art (VMAX)", rate: "1/11", percentage: "9.1%" },
-            { rarity: "Secret Rare (Rainbow)", rate: "1/24", percentage: "4.2%" },
+            { rarity: "Secret Rare (Rainbow)", rate: "1/40", percentage: "2.5%" },
             { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
         ],
         topPulls: [
-            { name: "Charizard VMAX", rarity: "Secret Rare", price: "€280.00", cardNumber: "201/189", image: "card-daa-zard.png" },
-            { name: "Eternatus VMAX", rarity: "Secret Rare", price: "€45.00", cardNumber: "192/189", image: "card-daa-etern.png" },
-            { name: "Crobat V", rarity: "Full Art", price: "€30.00", cardNumber: "182/189", image: "card-daa-crobat.png" }
+            { name: "Charizard VMAX", rarity: "Ultra Rare", price: "€30.00", cardNumber: "020/189", image: "card-daa-zard.png" },
+            { name: "Salamence VMAX", rarity: "Rainbow Rare", price: "€15.00", cardNumber: "194/189", image: "card-daa-sala.png" },
+            { name: "Crobat V", rarity: "Full Art", price: "€5.00", cardNumber: "182/189", image: "card-daa-crobat.png" }
         ]
     },
     {
         id: "swsh-02",
         name: {
-            "German": "Flammende Finsternis",
+            "German": "Clash der Rebellen",
             "English": "Rebel Clash",
             "Japanese": "Rebellion Crash",
             "Korean": "Rebellion Crash"
@@ -834,14 +815,14 @@ const setsData = [
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
             { rarity: "Ultra Rare (V)", rate: "1/8", percentage: "12.5%" },
-            { rarity: "Full Art (VMAX)", rate: "1/12", percentage: "8.3%" },
-            { rarity: "Secret Rare (Rainbow)", rate: "1/24", percentage: "4.2%" },
+            { rarity: "Full Art", rate: "1/20", percentage: "5.0%" },
+            { rarity: "Secret Rare (Rainbow)", rate: "1/40", percentage: "2.5%" },
             { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
         ],
         topPulls: [
-            { name: "Boss's Orders", rarity: "Full Art", price: "€55.00", cardNumber: "189/192", image: "card-rcl-boss.png" },
-            { name: "Dragapult VMAX", rarity: "Secret Rare", price: "€35.00", cardNumber: "211/192", image: "card-rcl-drag.png" },
-            { name: "Eldegoss V", rarity: "Full Art", price: "€25.00", cardNumber: "195/192", image: "card-rcl-elde.png" }
+            { name: "Boss's Orders", rarity: "Full Art", price: "€30.00", cardNumber: "189/192", image: "card-rcl-boss.png" },
+            { name: "Sonia", rarity: "Full Art", price: "€25.00", cardNumber: "192/192", image: "card-rcl-sonia.png" },
+            { name: "Cinderace VMAX", rarity: "Rainbow Rare", price: "€15.00", cardNumber: "194/192", image: "card-rcl-cinder.png" }
         ]
     },
     {
@@ -861,14 +842,14 @@ const setsData = [
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
             { rarity: "Ultra Rare (V)", rate: "1/8", percentage: "12.5%" },
-            { rarity: "Full Art (VMAX)", rate: "1/12", percentage: "8.3%" },
-            { rarity: "Secret Rare (Rainbow)", rate: "1/24", percentage: "4.2%" },
+            { rarity: "Full Art", rate: "1/20", percentage: "5.0%" },
+            { rarity: "Secret Rare (Rainbow)", rate: "1/40", percentage: "2.5%" },
             { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
         ],
         topPulls: [
-            { name: "Zacian V", rarity: "Secret Rare", price: "€45.00", cardNumber: "211/202", image: "card-ssh-zacian.png" },
-            { name: "Zamazenta V", rarity: "Secret Rare", price: "€40.00", cardNumber: "212/202", image: "card-ssh-zama.png" },
-            { name: "Marnie", rarity: "Full Art", price: "€85.00", cardNumber: "200/202", image: "card-ssh-marnie.png" }
+            { name: "Marnie", rarity: "Full Art", price: "€45.00", cardNumber: "200/202", image: "card-ssh-marnie.png" },
+            { name: "Snorlax VMAX", rarity: "Rainbow Rare", price: "€25.00", cardNumber: "206/202", image: "card-ssh-snorlax.png" },
+            { name: "Zacian V", rarity: "Gold Secret", price: "€15.00", cardNumber: "211/202", image: "card-ssh-zacian.png" }
         ]
     }
 ];

@@ -41,11 +41,12 @@ function displayFeaturedSets() {
     const initialState = document.getElementById('initialState');
     
     // Select featured sets: Mix of popular/newest sets across series
+    // Updated IDs to match the new real data in data.js where applicable
     const featuredSetIds = [
-        'sv-11',      // Fatal Flames (newest, Mega Evolution)
         'sv-08',      // Surging Sparks (popular Pikachu)
         'sv-151',     // 151 (iconic)
-        'swsh-07',    // Evolving Skies (highly sought after)
+        'swsh-07',    // Evolving Skies (Moonbreon)
+        'swsh-11',    // Lost Origin (Giratina)
         'swsh-09',    // Brilliant Stars (Charizard Alt Art)
         'swsh-12.5'   // Crown Zenith (recent SWSH)
     ];
@@ -363,7 +364,8 @@ function displayBrowsePage() {
     const scarletVioletSection = buildSeriesSection('Scarlet & Violet', scarletVioletSets, 'from-red-500 to-purple-600');
     const swordShieldSection = buildSeriesSection('Sword & Shield', swordShieldSets, 'from-blue-600 to-red-600');
 
-    const contentWrapper = `<div id="browseSetsContent">${megaSection + scarletVioletSection + swordShieldSection}</div>`;
+    // Added space-y-24 here for more gap between eras
+    const contentWrapper = `<div id="browseSetsContent" class="space-y-24">${megaSection + scarletVioletSection + swordShieldSection}</div>`;
 
     container.innerHTML = header + languageTabs + contentWrapper;
     contentArea.appendChild(container);
@@ -376,6 +378,8 @@ function displayBrowsePage() {
 }
 
 function buildSeriesSection(seriesName, sets, gradientColor) {
+    if (sets.length === 0) return ''; // Don't show empty sections
+
     const setCards = sets.map(set => `
         <div onclick="selectSet('${set.id}')" class="browse-set-card cursor-pointer bg-white rounded-xl border-2 border-slate-200 overflow-hidden hover:border-brand-500 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-german="${set.name.German.toLowerCase()}" data-english="${set.name.English.toLowerCase()}" data-japanese="${set.name.Japanese.toLowerCase()}" data-korean="${set.name.Korean.toLowerCase()}">
             <div class="h-24 bg-gradient-to-br ${set.color} relative overflow-hidden flex items-center justify-center">
