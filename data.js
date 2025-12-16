@@ -13,7 +13,7 @@ const setsData = [
         series: "Mega Evolution",
         releaseDate: "2026-01-30",
         totalCards: "217+",
-        symbol: "PFL",
+        symbol: "ASC",
         symbolImage: "symbols/asc.png",
         banner: "banners/asc-banner.png",
         color: "from-orange-500 to-purple-700",
