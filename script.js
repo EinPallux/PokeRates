@@ -250,12 +250,15 @@ function renderSetDetails(set) {
         </div>
     `;
 
-    // 3. Top Pulls Section - UPDATED FOR PRICE GRID
+    // 3. Top Pulls Section - UPDATED TO SHOW IMAGES FROM DATA.JS
     const topPullsCards = set.topPulls.map(card => `
         <div class="group relative bg-white rounded-xl shadow-card overflow-hidden border border-slate-100 p-4">
-            <div class="aspect-[3/4] rounded-lg overflow-hidden shadow-sm bg-slate-200 card-placeholder border border-slate-200 mb-4 mx-auto w-3/4 relative">
-                 <div class="absolute inset-0 flex items-center justify-center text-slate-300 font-bold text-2xl opacity-20 select-none">IMG</div>
-                 </div>
+            <div class="aspect-[3/4] rounded-lg overflow-hidden shadow-sm bg-slate-200 border border-slate-200 mb-4 mx-auto w-3/4 relative">
+                 ${card.image ? 
+                    `<img src="images/${card.image}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" alt="${card.name}" loading="lazy">` : 
+                    `<div class="absolute inset-0 flex items-center justify-center text-slate-300 font-bold text-2xl opacity-20 select-none card-placeholder">IMG</div>`
+                 }
+            </div>
             
             <div class="text-center mb-4">
                 <h4 class="font-bold text-slate-900 leading-tight">${card.name}</h4>
