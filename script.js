@@ -35,20 +35,28 @@ document.addEventListener('DOMContentLoaded', () => {
     displayFeaturedSets();
 });
 
+// --- Helper Functions ---
+
+function formatDate(dateString) {
+    if (!dateString) return '';
+    const parts = dateString.split('-');
+    if (parts.length !== 3) return dateString;
+    return `${parts[2]}.${parts[1]}.${parts[0]}`;
+}
+
 // --- Featured Sets Display ---
 
 function displayFeaturedSets() {
     const initialState = document.getElementById('initialState');
     
     // Select featured sets: Mix of popular/newest sets across series
-    // Updated IDs to match the new real data in data.js where applicable
     const featuredSetIds = [
-        'sv-08',      // Surging Sparks (popular Pikachu)
-        'sv-151',     // 151 (iconic)
-        'swsh-07',    // Evolving Skies (Moonbreon)
-        'swsh-11',    // Lost Origin (Giratina)
-        'swsh-09',    // Brilliant Stars (Charizard Alt Art)
-        'swsh-12.5'   // Crown Zenith (recent SWSH)
+        'sv-08',      // Surging Sparks
+        'sv-151',     // 151
+        'swsh-07',    // Evolving Skies
+        'swsh-11',    // Lost Origin
+        'swsh-09',    // Brilliant Stars
+        'swsh-12.5'   // Crown Zenith
     ];
 
     const featuredSets = setsData.filter(set => featuredSetIds.includes(set.id));
@@ -70,11 +78,12 @@ function displayFeaturedSets() {
                 ${set.banner ? `
                     <img src="${set.banner}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" alt="${set.name.English} Banner">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
-                ` : ''}
+                ` : `
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-white text-5xl font-bold opacity-20 relative z-10">${set.symbol}</div>
+                    </div>
+                `}
 
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <div class="text-white text-5xl font-bold opacity-20 relative z-10">${set.symbol}</div>
-                </div>
                 <div class="absolute top-3 left-3 bg-white/20 backdrop-blur-sm px-2 py-1 rounded text-xs font-semibold text-white relative z-10">
                     ${set.series}
                 </div>
@@ -86,7 +95,7 @@ function displayFeaturedSets() {
                 <p class="text-xs text-slate-500 mb-3">${set.name['German']}</p>
                 <div class="flex items-center justify-between">
                     <span class="text-xs text-slate-400">${set.totalCards} Cards</span>
-                    <span class="text-xs font-medium text-slate-600">${set.releaseDate}</span>
+                    <span class="text-xs font-medium text-slate-600">${formatDate(set.releaseDate)}</span>
                 </div>
                 <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
                     <span class="text-xs text-slate-500">Chase Card:</span>
@@ -216,7 +225,7 @@ function renderSetDetails(set) {
                 <div>
                     <div class="flex items-center gap-3 mb-2">
                         <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase">${set.series}</span>
-                        <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase">${set.releaseDate}</span>
+                        <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase">${formatDate(set.releaseDate)}</span>
                     </div>
                     <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-1 drop-shadow-md">${set.name['English']}</h2>
                     <p class="text-white/90 text-lg font-light drop-shadow-sm">${set.name['German']} / ${set.name['Japanese']}</p>
@@ -314,17 +323,9 @@ function renderSetDetails(set) {
 // --- Quick Filters ---
 
 function filterByLang(lang) {
-    // For now, since sets are multi-lingual, we will perform a "search" for that language name
-    // Or display a filtered list. Let's make it simulate searching for a common term in that language.
-    // However, the prompt implies "Quick Language Filter". 
-    // Let's just scroll to search and focus it with a placeholder.
-    
     searchInput.focus();
     searchInput.placeholder = `Search for ${lang} sets...`;
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    
-    // Optional: You could filter the setsData to only show sets that exist in that region 
-    // if your data had region-exclusivity flags.
 }
 
 // --- Browse All Sets Page ---
@@ -398,19 +399,22 @@ function buildSeriesSection(seriesName, sets, gradientColor) {
                 ${set.banner ? `
                     <img src="${set.banner}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
-                ` : ''}
+                ` : `
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-white text-4xl font-bold opacity-30 select-none">${set.symbol}</div>
+                    </div>
+                `}
 
                 <div class="relative z-10">
                     ${set.symbolImage ? 
                         `<img src="${set.symbolImage}" alt="${set.symbol}" class="h-16 w-16 object-contain drop-shadow-md" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                         <div class="text-white text-4xl font-bold opacity-50" style="display:none;">${set.symbol}</div>` 
-                        : 
-                        `<div class="text-white text-4xl font-bold opacity-50 drop-shadow-md">${set.symbol}</div>`
+                        : '' // Removed overlay text here as requested
                     }
                 </div>
                 
                 <div class="absolute top-2 right-2 bg-white/20 backdrop-blur-sm px-2 py-1 rounded text-xs font-semibold text-white relative z-10 shadow-sm">
-                    ${set.releaseDate}
+                    ${formatDate(set.releaseDate)}
                 </div>
             </div>
             

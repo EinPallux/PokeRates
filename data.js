@@ -1,7 +1,36 @@
-// data.js - UPDATED WITH BANNERS & REAL MARKET DATA
+// data.js - UPDATED PRICES & ALL BANNERS
 
 const setsData = [
     // ===== MEGA EVOLUTION SERIES ===== (FUTURE/ESTIMATED)
+    {
+        id: "mega-03",
+        name: {
+            "German": "Erhabene Helden",
+            "English": "Ascended Heroes",
+            "Japanese": "Mega Dream Ex / Wild Force",
+            "Korean": "Mega Dream Ex / Wild Force"
+        },
+        series: "Mega Evolution",
+        releaseDate: "2026-01-30",
+        totalCards: "217+",
+        symbol: "PFL",
+        symbolImage: "symbols/asc.png",
+        banner: "banners/asc-banner.png",
+        color: "from-orange-500 to-purple-700",
+        rates: [
+            { rarity: "Double Rare (ex)", rate: "?", percentage: "?%" },
+            { rarity: "Illustration Rare (IR)", rate: "?", percentage: "?%" },
+            { rarity: "Ultra Rare (Full Art)", rate: "?", percentage: "?%" },
+            { rarity: "Special Illustration Rare (SIR)", rate: "?", percentage: "?%" },
+            { rarity: "Mega Hyper Rare (MHR)", rate: ")", percentage: "?%", note: "Extremely Rare!" }
+        ],
+        topPulls: [
+            { name: "?", rarity: "MHR", price: "€???", cardNumber: "???", image: "card-zard-mhr.png" },
+            { name: "?", rarity: "SIR", price: "€???", cardNumber: "???", image: "card-zard-sir.png" },
+            { name: "?", rarity: "SIR", price: "€???", cardNumber: "???", image: "card-gengar-sir.png" },
+            { name: "?", rarity: "SIR", price: "€???", cardNumber: "???", image: "card-rotom-sir.png" }
+        ]
+    },
     {
         id: "mega-02",
         name: {
@@ -15,8 +44,8 @@ const setsData = [
         totalCards: "130+",
         symbol: "PFL",
         symbolImage: "symbols/pfl.png",
+        banner: "banners/pfl-banner.png",
         color: "from-orange-500 to-purple-700",
-        banner: "banners/pfl-banner.png", // <--- BEISPIEL BANNER
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/5", percentage: "20%" },
             { rarity: "Illustration Rare (IR)", rate: "1/9", percentage: "11.1%" },
@@ -44,8 +73,8 @@ const setsData = [
         totalCards: "180+",
         symbol: "MEG",
         symbolImage: "symbols/meg.png",
+        banner: "banners/meg-banner.png",
         color: "from-blue-600 to-pink-500",
-        // Kein Banner hier -> nutzt Fallback Gradient
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/5", percentage: "20%" },
             { rarity: "Illustration Rare (IR)", rate: "1/9", percentage: "11.1%" },
@@ -75,6 +104,7 @@ const setsData = [
         totalCards: "090+",
         symbol: "WF",
         symbolImage: "symbols/wf.png",
+        banner: "banners/wf-banner.png",
         color: "from-orange-100 to-red-200",
         rates: [
             { rarity: "Pokéball Reverse Holo", rate: "1/1", percentage: "100%", note: "Guaranteed per pack" },
@@ -104,6 +134,7 @@ const setsData = [
         totalCards: "090+",
         symbol: "BB",
         symbolImage: "symbols/bb.png",
+        banner: "banners/bb-banner.png",
         color: "from-gray-900 to-slate-700",
         rates: [
             { rarity: "Pokéball Reverse Holo", rate: "1/1", percentage: "100%", note: "Guaranteed per pack" },
@@ -132,6 +163,7 @@ const setsData = [
         totalCards: "190+",
         symbol: "DR",
         symbolImage: "symbols/dr.png",
+        banner: "banners/dr-banner.png",
         color: "from-red-600 to-gray-900",
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.7%" },
@@ -160,6 +192,7 @@ const setsData = [
         totalCards: "180+",
         symbol: "JT",
         symbolImage: "symbols/jt.png",
+        banner: "banners/jt-banner.png",
         color: "from-blue-400 to-green-500",
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.7%" },
@@ -188,6 +221,7 @@ const setsData = [
         totalCards: "180+",
         symbol: "PRE",
         symbolImage: "symbols/pre.png",
+        banner: "banners/pre-banner.png",
         color: "from-pink-400 to-cyan-400",
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/5", percentage: "20%" },
@@ -215,8 +249,8 @@ const setsData = [
         totalCards: "250+",
         symbol: "SS",
         symbolImage: "symbols/ss.png",
+        banner: "banners/ss-banner.png",
         color: "from-yellow-400 to-yellow-600",
-        banner: "banners/ss-banner.jpg", // <--- BEISPIEL BANNER
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.6%" },
             { rarity: "ACE SPEC", rate: "1/20", percentage: "5.0%" },
@@ -226,7 +260,7 @@ const setsData = [
             { rarity: "Hyper Rare (Gold)", rate: "1/140", percentage: "0.71%" }
         ],
         topPulls: [
-            { name: "Pikachu ex", rarity: "SIR", price: "€238.00", cardNumber: "238/191", image: "card-ss-pika.png" },
+            { name: "Pikachu ex", rarity: "SIR", price: "€200.00", cardNumber: "238/191", image: "card-ss-pika.png" },
             { name: "Latias ex", rarity: "SIR", price: "€48.00", cardNumber: "235/191", image: "card-ss-latias.png" },
             { name: "Lisia's Appeal", rarity: "SIR", price: "€65.00", cardNumber: "242/191", image: "card-ss-lisia.png" }
         ]
@@ -244,6 +278,7 @@ const setsData = [
         totalCards: "170+",
         symbol: "SC",
         symbolImage: "symbols/sc.png",
+        banner: "banners/sc-banner.png",
         color: "from-yellow-300 to-orange-400",
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.6%" },
@@ -254,7 +289,7 @@ const setsData = [
             { rarity: "Hyper Rare (Gold)", rate: "1/120", percentage: "0.83%" }
         ],
         topPulls: [
-            { name: "Terapagos ex", rarity: "SIR", price: "€39.00", cardNumber: "170/142", image: "card-sc-tera.png" },
+            { name: "Terapagos ex", rarity: "SIR", price: "€45.00", cardNumber: "170/142", image: "card-sc-tera.png" },
             { name: "Galarian Moltres ex", rarity: "SIR", price: "€42.00", cardNumber: "168/142", image: "card-sc-molt.png" },
             { name: "Lacey", rarity: "SIR", price: "€32.00", cardNumber: "172/142", image: "card-sc-lacey.png" }
         ]
@@ -272,6 +307,7 @@ const setsData = [
         totalCards: "226+",
         symbol: "TM",
         symbolImage: "symbols/tm.png",
+        banner: "banners/tm-banner.png",
         color: "from-green-600 to-purple-600",
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.6%" },
@@ -282,7 +318,7 @@ const setsData = [
             { rarity: "Hyper Rare (Gold)", rate: "1/140", percentage: "0.71%" }
         ],
         topPulls: [
-            { name: "Greninja ex", rarity: "SIR", price: "€217.00", cardNumber: "214/167", image: "card-tm-greninja.png" },
+            { name: "Greninja ex", rarity: "SIR", price: "€100.00", cardNumber: "214/167", image: "card-tm-greninja.png" },
             { name: "Carmine", rarity: "SIR", price: "€75.00", cardNumber: "217/167", image: "card-tm-carmine.png" },
             { name: "Perrin", rarity: "SIR", price: "€38.00", cardNumber: "215/167", image: "card-tm-perrin.png" }
         ]
@@ -300,6 +336,7 @@ const setsData = [
         totalCards: "218+",
         symbol: "TF",
         symbolImage: "symbols/tf.png",
+        banner: "banners/tf-banner.png",
         color: "from-purple-600 to-cyan-500",
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.6%" },
@@ -328,6 +365,7 @@ const setsData = [
         totalCards: "240+",
         symbol: "PF",
         symbolImage: "symbols/pf.png",
+        banner: "banners/pf-banner.png",
         color: "from-indigo-500 to-pink-500",
         rates: [
             { rarity: "Shiny Rare", rate: "1/3", percentage: "33.3%" },
@@ -338,7 +376,7 @@ const setsData = [
             { rarity: "Hyper Rare (Gold)", rate: "1/92", percentage: "1.0%" }
         ],
         topPulls: [
-            { name: "Charizard ex (Shiny)", rarity: "SIR", price: "€115.00", cardNumber: "234/091", image: "card-pf-zard.png" },
+            { name: "Charizard ex (Shiny)", rarity: "SIR", price: "€210.00", cardNumber: "234/091", image: "card-pf-zard.png" },
             { name: "Mew ex (Shiny)", rarity: "SIR", price: "€85.00", cardNumber: "232/091", image: "card-pf-mew.png" },
             { name: "Gardevoir ex (Shiny)", rarity: "SIR", price: "€45.00", cardNumber: "233/091", image: "card-pf-garde.png" }
         ]
@@ -356,6 +394,7 @@ const setsData = [
         totalCards: "266+",
         symbol: "PR",
         symbolImage: "symbols/pr.png",
+        banner: "banners/pr-banner.png",
         color: "from-teal-500 to-blue-700",
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/7", percentage: "14.3%" },
@@ -365,7 +404,7 @@ const setsData = [
             { rarity: "Hyper Rare (Gold)", rate: "1/75", percentage: "1.3%" }
         ],
         topPulls: [
-            { name: "Roaring Moon ex", rarity: "SIR", price: "€58.00", cardNumber: "251/182", image: "card-pr-moon.png" },
+            { name: "Roaring Moon ex", rarity: "SIR", price: "€55.00", cardNumber: "251/182", image: "card-pr-moon.png" },
             { name: "Iron Valiant ex", rarity: "SIR", price: "€32.00", cardNumber: "249/182", image: "card-pr-valiant.png" },
             { name: "Ghoudengo ex", rarity: "SIR", price: "€28.00", cardNumber: "252/182", image: "card-pr-ghol.png" }
         ]
@@ -383,6 +422,7 @@ const setsData = [
         totalCards: "165+207",
         symbol: "MEW",
         symbolImage: "symbols/mew.png",
+        banner: "banners/mew-banner.png",
         color: "from-pink-500 to-purple-600",
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/7", percentage: "14.2%" },
@@ -411,6 +451,7 @@ const setsData = [
         totalCards: "230+",
         symbol: "OF",
         symbolImage: "symbols/of.png",
+        banner: "banners/of-banner.png",
         color: "from-red-700 to-slate-900",
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/7", percentage: "13.6%" },
@@ -420,7 +461,7 @@ const setsData = [
             { rarity: "Hyper Rare (Gold)", rate: "1/52", percentage: "1.9%" }
         ],
         topPulls: [
-            { name: "Charizard ex (Dark Tera)", rarity: "SIR", price: "€52.00", cardNumber: "223/197", image: "card-of-zard.png" },
+            { name: "Charizard ex (Dark Tera)", rarity: "SIR", price: "€45.00", cardNumber: "223/197", image: "card-of-zard.png" },
             { name: "Pidgeot ex", rarity: "SIR", price: "€12.00", cardNumber: "225/197", image: "card-of-pidgeot.png" },
             { name: "Charizard ex", rarity: "Ultra Rare", price: "€18.00", cardNumber: "215/197", image: "card-of-zard-fa.png" }
         ]
@@ -438,6 +479,7 @@ const setsData = [
         totalCards: "279+",
         symbol: "PE",
         symbolImage: "symbols/pe.png",
+        banner: "banners/pe-banner.png",
         color: "from-blue-500 to-orange-500",
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/7", percentage: "14.3%" },
@@ -447,7 +489,7 @@ const setsData = [
             { rarity: "Hyper Rare (Gold)", rate: "1/52", percentage: "1.9%" }
         ],
         topPulls: [
-            { name: "Magikarp", rarity: "IR", price: "€157.00", cardNumber: "203/193", image: "card-pe-karp.png" },
+            { name: "Magikarp", rarity: "IR", price: "€201.00", cardNumber: "203/193", image: "card-pe-karp.png" },
             { name: "Iono", rarity: "SIR", price: "€72.00", cardNumber: "269/193", image: "card-pe-iono.png" },
             { name: "Chien-Pao ex", rarity: "SIR", price: "€28.00", cardNumber: "261/193", image: "card-pe-chien.png" }
         ]
@@ -465,6 +507,7 @@ const setsData = [
         totalCards: "198+",
         symbol: "SV",
         symbolImage: "symbols/sv.png",
+        banner: "banners/sv-banner.png",
         color: "from-red-500 to-purple-600",
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/7", percentage: "14.3%" },
@@ -494,6 +537,7 @@ const setsData = [
         totalCards: "160+",
         symbol: "CRZ",
         symbolImage: "symbols/crz.png",
+        banner: "banners/crz-banner.png",
         color: "from-yellow-400 to-purple-600",
         rates: [
             { rarity: "Holo Rare", rate: "1/2", percentage: "50%" },
@@ -503,7 +547,7 @@ const setsData = [
             { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
         ],
         topPulls: [
-            { name: "Giratina VSTAR", rarity: "Gold Secret", price: "€95.00", cardNumber: "GG69/GG70", image: "card-crz-gira.png" },
+            { name: "Giratina VSTAR", rarity: "Gold Secret", price: "€181.00", cardNumber: "GG69/GG70", image: "card-crz-gira.png" },
             { name: "Arceus VSTAR", rarity: "Gold Secret", price: "€75.00", cardNumber: "GG70/GG70", image: "card-crz-arc.png" },
             { name: "Mewtwo VSTAR", rarity: "Galarian Gallery", price: "€60.00", cardNumber: "GG44/GG70", image: "card-crz-mewtwo.png" }
         ]
@@ -521,6 +565,7 @@ const setsData = [
         totalCards: "215+",
         symbol: "SIT",
         symbolImage: "symbols/sit.png",
+        banner: "banners/sit-banner.png",
         color: "from-slate-400 to-blue-700",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
@@ -530,7 +575,7 @@ const setsData = [
             { rarity: "Secret Rare (Rainbow/Gold)", rate: "1/40", percentage: "2.5%" }
         ],
         topPulls: [
-            { name: "Lugia V", rarity: "Alternate Art", price: "€165.00", cardNumber: "186/195", image: "card-sit-lugia.png" },
+            { name: "Lugia V", rarity: "Alternate Art", price: "€383.00", cardNumber: "186/195", image: "card-sit-lugia.png" },
             { name: "Regidrago V", rarity: "Alternate Art", price: "€18.00", cardNumber: "184/195", image: "card-sit-regi.png" },
             { name: "Unown V", rarity: "Alternate Art", price: "€25.00", cardNumber: "177/195", image: "card-sit-unown.png" }
         ]
@@ -548,6 +593,7 @@ const setsData = [
         totalCards: "217+",
         symbol: "LOR",
         symbolImage: "symbols/lor.png",
+        banner: "banners/lor-banner.png",
         color: "from-indigo-600 to-gray-800",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
@@ -557,7 +603,7 @@ const setsData = [
             { rarity: "Secret Rare (Rainbow/Gold)", rate: "1/40", percentage: "2.5%" }
         ],
         topPulls: [
-            { name: "Giratina V", rarity: "Alternate Art", price: "€460.00", cardNumber: "186/196", image: "card-lor-gira.png" },
+            { name: "Giratina V", rarity: "Alternate Art", price: "€528.00", cardNumber: "186/196", image: "card-lor-gira.png" },
             { name: "Aerodactyl V", rarity: "Alternate Art", price: "€95.00", cardNumber: "180/196", image: "card-lor-aero.png" },
             { name: "Pikachu VMAX", rarity: "Trainer Gallery", price: "€45.00", cardNumber: "TG17/TG30", image: "card-lor-pika.png" }
         ]
@@ -575,6 +621,7 @@ const setsData = [
         totalCards: "216+",
         symbol: "ASR",
         symbolImage: "symbols/asr.png",
+        banner: "banners/asr-banner.png",
         color: "from-purple-500 to-pink-400",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
@@ -602,6 +649,7 @@ const setsData = [
         totalCards: "172+",
         symbol: "BRS",
         symbolImage: "symbols/brs.png",
+        banner: "banners/brs-banner.png",
         color: "from-yellow-300 to-blue-600",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
@@ -629,6 +677,7 @@ const setsData = [
         totalCards: "284+",
         symbol: "FST",
         symbolImage: "symbols/fst.png",
+        banner: "banners/fst-banner.png",
         color: "from-purple-600 to-orange-500",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
@@ -637,7 +686,7 @@ const setsData = [
             { rarity: "Secret Rare (Rainbow/Gold)", rate: "1/36", percentage: "2.8%" }
         ],
         topPulls: [
-            { name: "Gengar VMAX", rarity: "Alternate Art", price: "€260.00", cardNumber: "271/264", image: "card-fst-gengar.png" },
+            { name: "Gengar VMAX", rarity: "Alternate Art", price: "€800.00", cardNumber: "271/264", image: "card-fst-gengar.png" },
             { name: "Espeon VMAX", rarity: "Alternate Art", price: "€210.00", cardNumber: "270/264", image: "card-fst-esp.png" },
             { name: "Mew VMAX", rarity: "Alternate Art", price: "€85.00", cardNumber: "269/264", image: "card-fst-mew.png" }
         ]
@@ -655,6 +704,7 @@ const setsData = [
         totalCards: "237+",
         symbol: "EVS",
         symbolImage: "symbols/evs.png",
+        banner: "banners/evs-banner.png",
         color: "from-cyan-400 to-pink-500",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
@@ -664,7 +714,7 @@ const setsData = [
             { rarity: "Secret Rare (Rainbow/Gold)", rate: "1/50", percentage: "2.0%" }
         ],
         topPulls: [
-            { name: "Umbreon VMAX", rarity: "Alternate Art", price: "€750.00", cardNumber: "215/203", image: "card-evs-umbre.png" },
+            { name: "Umbreon VMAX", rarity: "Alternate Art", price: "€1100.00", cardNumber: "215/203", image: "card-evs-umbre.png" },
             { name: "Rayquaza VMAX", rarity: "Alternate Art", price: "€320.00", cardNumber: "218/203", image: "card-evs-ray.png" },
             { name: "Leafeon VMAX", rarity: "Alternate Art", price: "€220.00", cardNumber: "205/203", image: "card-evs-leaf.png" }
         ]
@@ -682,6 +732,7 @@ const setsData = [
         totalCards: "198+",
         symbol: "CRE",
         symbolImage: "symbols/cre.png",
+        banner: "banners/cre-banner.png",
         color: "from-blue-400 to-purple-700",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
@@ -690,7 +741,7 @@ const setsData = [
             { rarity: "Secret Rare (Rainbow/Gold)", rate: "1/48", percentage: "2.1%" }
         ],
         topPulls: [
-            { name: "Blaziken VMAX", rarity: "Alternate Art", price: "€210.00", cardNumber: "201/198", image: "card-cre-blazi.png" },
+            { name: "Blaziken VMAX", rarity: "Alternate Art", price: "€220.00", cardNumber: "201/198", image: "card-cre-blazi.png" },
             { name: "Galarian Moltres V", rarity: "Alternate Art", price: "€135.00", cardNumber: "177/198", image: "card-cre-molt.png" },
             { name: "Shadow Rider Calyrex VMAX", rarity: "Alternate Art", price: "€75.00", cardNumber: "205/198", image: "card-cre-caly.png" }
         ]
@@ -708,6 +759,7 @@ const setsData = [
         totalCards: "163+",
         symbol: "BST",
         symbolImage: "symbols/bst.png",
+        banner: "banners/bst-banner.png",
         color: "from-orange-500 to-gray-700",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
@@ -734,6 +786,7 @@ const setsData = [
         totalCards: "072+",
         symbol: "SHF",
         symbolImage: "symbols/shf.png",
+        banner: "banners/shf-banner.png",
         color: "from-pink-400 to-blue-500",
         rates: [
             { rarity: "Shiny Rare", rate: "1/2", percentage: "50%" },
@@ -760,6 +813,7 @@ const setsData = [
         totalCards: "185+",
         symbol: "VIV",
         symbolImage: "symbols/viv.png",
+        banner: "banners/viv-banner.png",
         color: "from-yellow-400 to-purple-600",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
@@ -769,7 +823,7 @@ const setsData = [
             { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
         ],
         topPulls: [
-            { name: "Pikachu VMAX", rarity: "Rainbow Rare", price: "€110.00", cardNumber: "188/185", image: "card-viv-pika.png" },
+            { name: "Pikachu VMAX", rarity: "Rainbow Rare", price: "€133.00", cardNumber: "188/185", image: "card-viv-pika.png" },
             { name: "Pikachu V", rarity: "Full Art", price: "€15.00", cardNumber: "170/185", image: "card-viv-pika-fa.png" },
             { name: "Rayquaza", rarity: "Amazing Rare", price: "€8.00", cardNumber: "138/185", image: "card-viv-ray.png" }
         ]
@@ -787,6 +841,7 @@ const setsData = [
         totalCards: "189+",
         symbol: "DAA",
         symbolImage: "symbols/daa.png",
+        banner: "banners/daa-banner.png",
         color: "from-red-600 to-gray-900",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
@@ -814,6 +869,7 @@ const setsData = [
         totalCards: "192+",
         symbol: "RCL",
         symbolImage: "symbols/rcl.png",
+        banner: "banners/rcl-banner.png",
         color: "from-orange-600 to-slate-800",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
@@ -823,7 +879,7 @@ const setsData = [
             { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
         ],
         topPulls: [
-            { name: "Boss's Orders", rarity: "Full Art", price: "€30.00", cardNumber: "189/192", image: "card-rcl-boss.png" },
+            { name: "Boss's Orders", rarity: "Full Art", price: "€45.00", cardNumber: "189/192", image: "card-rcl-boss.png" },
             { name: "Sonia", rarity: "Full Art", price: "€25.00", cardNumber: "192/192", image: "card-rcl-sonia.png" },
             { name: "Cinderace VMAX", rarity: "Rainbow Rare", price: "€15.00", cardNumber: "194/192", image: "card-rcl-cinder.png" }
         ]
@@ -841,6 +897,7 @@ const setsData = [
         totalCards: "202+",
         symbol: "SSH",
         symbolImage: "symbols/ssh.png",
+        banner: "banners/ssh-banner.png",
         color: "from-blue-600 to-red-600",
         rates: [
             { rarity: "Holo Rare", rate: "1/3", percentage: "33.3%" },
@@ -850,7 +907,7 @@ const setsData = [
             { rarity: "Secret Rare (Gold)", rate: "1/48", percentage: "2.1%" }
         ],
         topPulls: [
-            { name: "Marnie", rarity: "Full Art", price: "€45.00", cardNumber: "200/202", image: "card-ssh-marnie.png" },
+            { name: "Marnie", rarity: "Full Art", price: "€35.00", cardNumber: "200/202", image: "card-ssh-marnie.png" },
             { name: "Snorlax VMAX", rarity: "Rainbow Rare", price: "€25.00", cardNumber: "206/202", image: "card-ssh-snorlax.png" },
             { name: "Zacian V", rarity: "Gold Secret", price: "€15.00", cardNumber: "211/202", image: "card-ssh-zacian.png" }
         ]
