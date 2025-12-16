@@ -55,7 +55,6 @@ function displayFeaturedSets() {
         'sv-151',     // 151
         'swsh-07',    // Evolving Skies
         'swsh-11',    // Lost Origin
-        'swsh-09',    // Brilliant Stars
         'swsh-12.5'   // Crown Zenith
     ];
 
@@ -87,8 +86,6 @@ function displayFeaturedSets() {
                 <div class="absolute top-3 left-3 bg-white/20 backdrop-blur-sm px-2 py-1 rounded text-xs font-semibold text-white relative z-10">
                     ${set.series}
                 </div>
-                
-                ${!set.banner ? `<div class="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>` : ''}
             </div>
             <div class="p-5">
                 <h3 class="font-bold text-slate-900 text-lg mb-1 group-hover:text-brand-600 transition-colors">${set.name['English']}</h3>
@@ -99,7 +96,7 @@ function displayFeaturedSets() {
                 </div>
                 <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
                     <span class="text-xs text-slate-500">Chase Card:</span>
-                    <span class="text-sm font-bold text-emerald-600">${set.topPulls[0].price}</span>
+                    <span class="text-sm font-bold text-emerald-600">${set.topPulls[0].prices.raw}</span>
                 </div>
             </div>
         </div>
@@ -110,7 +107,6 @@ function displayFeaturedSets() {
             ${setCards}
         </div>
         <div class="text-center mt-12">
-            <p class="text-slate-400 text-sm mb-4">Looking for a specific set?</p>
             <button onclick="document.getElementById('searchInput').focus(); window.scrollTo({top: 0, behavior: 'smooth'});" class="inline-flex items-center gap-2 px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-xl transition-colors shadow-lg shadow-brand-500/30">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                 Search All Sets
@@ -268,19 +264,35 @@ function renderSetDetails(set) {
         </div>
     `;
 
-    // 3. Top Pulls Section (Cards)
+    // 3. Top Pulls Section (Cards) - UPDATED FOR PRICE GRID
     const topPullsCards = set.topPulls.map(card => `
-        <div class="group relative">
-            <div class="aspect-[3/4] rounded-xl overflow-hidden shadow-card group-hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-1 bg-slate-200 card-placeholder border-4 border-white">
-                <div class="absolute inset-0 flex items-center justify-center text-slate-300 font-bold text-4xl opacity-20 select-none">IMG</div>
+        <div class="group relative bg-white rounded-xl shadow-card overflow-hidden border border-slate-100 p-4">
+            <div class="aspect-[3/4] rounded-lg overflow-hidden shadow-sm bg-slate-200 card-placeholder border border-slate-200 mb-4 mx-auto w-3/4">
+                <div class="absolute inset-0 flex items-center justify-center text-slate-300 font-bold text-2xl opacity-20 select-none">IMG</div>
             </div>
             
-            <div class="mt-4 text-center">
+            <div class="text-center mb-4">
                 <h4 class="font-bold text-slate-900 leading-tight">${card.name}</h4>
                 <div class="text-xs text-slate-500 mt-1">${card.rarity}</div>
                 ${card.cardNumber ? `<div class="text-xs text-slate-400 font-mono mt-0.5">#${card.cardNumber}</div>` : ''}
-                <div class="inline-block bg-emerald-50 text-emerald-700 text-sm font-bold px-3 py-1.5 rounded-lg border border-emerald-100 mt-2">
-                    ${card.price}
+            </div>
+            
+            <div class="grid grid-cols-2 gap-2 text-xs">
+                <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                    <div class="text-slate-400 mb-0.5">Raw</div>
+                    <div class="font-bold text-emerald-600">${card.prices.raw}</div>
+                </div>
+                 <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                    <div class="text-slate-400 mb-0.5">PSA 9</div>
+                    <div class="font-semibold text-slate-700">${card.prices.psa9}</div>
+                </div>
+                 <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                    <div class="text-slate-400 mb-0.5">Grade 9.5</div>
+                    <div class="font-semibold text-slate-700">${card.prices.psa95}</div>
+                </div>
+                 <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                    <div class="text-slate-400 mb-0.5">PSA 10</div>
+                    <div class="font-bold text-amber-600">${card.prices.psa10}</div>
                 </div>
             </div>
         </div>
@@ -290,9 +302,9 @@ function renderSetDetails(set) {
         <div class="pt-8 border-t border-slate-200">
             <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
                 <svg class="w-5 h-5 text-accent-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
-                Top Pulls (Chase Cards)
+                Top Pulls (Chase Cards & Grading)
             </h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 ${topPullsCards}
             </div>
         </div>
@@ -421,7 +433,7 @@ function buildSeriesSection(seriesName, sets, gradientColor) {
                 </div>
                 <div class="flex items-center justify-between pt-3 border-t border-slate-100">
                     <span class="text-xs text-slate-400">${set.totalCards} Cards</span>
-                    <span class="text-xs font-bold text-emerald-600">${set.topPulls[0].price}</span>
+                    <span class="text-xs font-bold text-emerald-600">${set.topPulls[0].prices.raw}</span>
                 </div>
             </div>
         </div>
