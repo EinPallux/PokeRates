@@ -1,11 +1,11 @@
-// data.js - VERIFIED & CORRECTED NAMES
+// data.js - UPDATED WITH BANNERS & REAL MARKET DATA
 
 const setsData = [
     // ===== MEGA EVOLUTION SERIES ===== (FUTURE/ESTIMATED)
     {
         id: "mega-02",
         name: {
-            "German": "Phantasmalflammen",
+            "German": "Fatale Flammen",
             "English": "Phantasmal Flames",
             "Japanese": "Inferno X",
             "Korean": "Inferno X"
@@ -16,6 +16,7 @@ const setsData = [
         symbol: "PFL",
         symbolImage: "symbols/pfl.png",
         color: "from-orange-500 to-purple-700",
+        banner: "banners/pfl-banner.png", // <--- BEISPIEL BANNER
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/5", percentage: "20%" },
             { rarity: "Illustration Rare (IR)", rate: "1/9", percentage: "11.1%" },
@@ -44,6 +45,7 @@ const setsData = [
         symbol: "MEG",
         symbolImage: "symbols/meg.png",
         color: "from-blue-600 to-pink-500",
+        // Kein Banner hier -> nutzt Fallback Gradient
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/5", percentage: "20%" },
             { rarity: "Illustration Rare (IR)", rate: "1/9", percentage: "11.1%" },
@@ -214,6 +216,7 @@ const setsData = [
         symbol: "SS",
         symbolImage: "symbols/ss.png",
         color: "from-yellow-400 to-yellow-600",
+        banner: "banners/ss-banner.jpg", // <--- BEISPIEL BANNER
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.6%" },
             { rarity: "ACE SPEC", rate: "1/20", percentage: "5.0%" },

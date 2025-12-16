@@ -67,13 +67,19 @@ function displayFeaturedSets() {
     const setCards = featuredSets.map(set => `
         <div onclick="selectSet('${set.id}')" class="group cursor-pointer bg-white rounded-xl border border-slate-200 overflow-hidden shadow-soft hover:shadow-card transition-all duration-300 transform hover:-translate-y-1">
             <div class="h-32 bg-gradient-to-br ${set.color} relative overflow-hidden">
+                ${set.banner ? `
+                    <img src="${set.banner}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" alt="${set.name.English} Banner">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
+                ` : ''}
+
                 <div class="absolute inset-0 flex items-center justify-center">
-                    <div class="text-white text-5xl font-bold opacity-20">${set.symbol}</div>
+                    <div class="text-white text-5xl font-bold opacity-20 relative z-10">${set.symbol}</div>
                 </div>
-                <div class="absolute top-3 left-3 bg-white/20 backdrop-blur-sm px-2 py-1 rounded text-xs font-semibold text-white">
+                <div class="absolute top-3 left-3 bg-white/20 backdrop-blur-sm px-2 py-1 rounded text-xs font-semibold text-white relative z-10">
                     ${set.series}
                 </div>
-                <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+                
+                ${!set.banner ? `<div class="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>` : ''}
             </div>
             <div class="p-5">
                 <h3 class="font-bold text-slate-900 text-lg mb-1 group-hover:text-brand-600 transition-colors">${set.name['English']}</h3>
@@ -201,21 +207,27 @@ function renderSetDetails(set) {
     // 1. Header Section
     const header = `
         <div class="rounded-2xl bg-gradient-to-br ${set.color} p-6 sm:p-10 text-white shadow-card relative overflow-hidden">
+            ${set.banner ? `
+                <img src="${set.banner}" class="absolute inset-0 w-full h-full object-cover z-0 opacity-60 mix-blend-overlay">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-0"></div>
+            ` : ''}
+
             <div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
                     <div class="flex items-center gap-3 mb-2">
                         <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase">${set.series}</span>
                         <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase">${set.releaseDate}</span>
                     </div>
-                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-1">${set.name['English']}</h2>
-                    <p class="text-white/80 text-lg font-light">${set.name['German']} / ${set.name['Japanese']}</p>
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-1 drop-shadow-md">${set.name['English']}</h2>
+                    <p class="text-white/90 text-lg font-light drop-shadow-sm">${set.name['German']} / ${set.name['Japanese']}</p>
                 </div>
-                <div class="text-center md:text-right bg-white/10 p-4 rounded-xl backdrop-blur-md border border-white/10">
+                <div class="text-center md:text-right bg-white/10 p-4 rounded-xl backdrop-blur-md border border-white/10 shadow-lg">
                     <div class="text-4xl mb-1">${set.symbol}</div>
                     <div class="text-xs font-medium opacity-75">Set Symbol</div>
                 </div>
             </div>
-            <div class="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+            
+            ${!set.banner ? `<div class="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl z-0"></div>` : ''}
         </div>
     `;
 
@@ -381,18 +393,27 @@ function buildSeriesSection(seriesName, sets, gradientColor) {
     if (sets.length === 0) return ''; // Don't show empty sections
 
     const setCards = sets.map(set => `
-        <div onclick="selectSet('${set.id}')" class="browse-set-card cursor-pointer bg-white rounded-xl border-2 border-slate-200 overflow-hidden hover:border-brand-500 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-german="${set.name.German.toLowerCase()}" data-english="${set.name.English.toLowerCase()}" data-japanese="${set.name.Japanese.toLowerCase()}" data-korean="${set.name.Korean.toLowerCase()}">
+        <div onclick="selectSet('${set.id}')" class="browse-set-card group cursor-pointer bg-white rounded-xl border-2 border-slate-200 overflow-hidden hover:border-brand-500 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-german="${set.name.German.toLowerCase()}" data-english="${set.name.English.toLowerCase()}" data-japanese="${set.name.Japanese.toLowerCase()}" data-korean="${set.name.Korean.toLowerCase()}">
             <div class="h-24 bg-gradient-to-br ${set.color} relative overflow-hidden flex items-center justify-center">
-                ${set.symbolImage ? 
-                    `<img src="${set.symbolImage}" alt="${set.symbol}" class="h-16 w-16 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                     <div class="text-white text-4xl font-bold opacity-30" style="display:none;">${set.symbol}</div>` 
-                    : 
-                    `<div class="text-white text-4xl font-bold opacity-30">${set.symbol}</div>`
-                }
-                <div class="absolute top-2 right-2 bg-white/20 backdrop-blur-sm px-2 py-1 rounded text-xs font-semibold text-white">
+                ${set.banner ? `
+                    <img src="${set.banner}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
+                ` : ''}
+
+                <div class="relative z-10">
+                    ${set.symbolImage ? 
+                        `<img src="${set.symbolImage}" alt="${set.symbol}" class="h-16 w-16 object-contain drop-shadow-md" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="text-white text-4xl font-bold opacity-50" style="display:none;">${set.symbol}</div>` 
+                        : 
+                        `<div class="text-white text-4xl font-bold opacity-50 drop-shadow-md">${set.symbol}</div>`
+                    }
+                </div>
+                
+                <div class="absolute top-2 right-2 bg-white/20 backdrop-blur-sm px-2 py-1 rounded text-xs font-semibold text-white relative z-10 shadow-sm">
                     ${set.releaseDate}
                 </div>
             </div>
+            
             <div class="p-4">
                 <div class="mb-3">
                     <h4 class="font-bold text-slate-900 text-base mb-1 hover:text-brand-600 transition-colors">${set.name['English']}</h4>
