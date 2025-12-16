@@ -74,7 +74,7 @@ const setsData = [
             { 
                 name: "Mega Charizard X ex", 
                 rarity: "MHR", 
-                prices: { raw: "€344.91", psa9: "N/A", psa95: "N/A", psa10: "N/A" }, 
+                prices: { raw: "€344.91", psa9: "€605.00", psa95: "€960.00", psa10: "€3,300.00" }, 
                 cardNumber: "130/094", 
                 image: "card-zard-mhr.png" 
             },
@@ -86,11 +86,11 @@ const setsData = [
                 image: "card-zard-sir.png" 
             },
             { 
-                name: "Mega Gengar ex", 
+                name: "Mega Charizard X ex", 
                 rarity: "SIR", 
-                prices: { raw: "€120.00", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
-                cardNumber: "126/094", 
-                image: "card-gengar-sir.png" 
+                prices: { raw: "€33.00", psa9: "€67.00", psa95: "€132.00", psa10: "€599.00" },
+                cardNumber: "109/094", 
+                image: "card-zard2-sir.png" 
             }
         ]
     },
