@@ -275,12 +275,16 @@ function renderSetDetails(set) {
         </div>
     `;
 
-    // 4. Back to Featured Sets Button
+    // 4. Navigation Buttons
     const backButton = `
-        <div class="pt-8 text-center">
+        <div class="pt-8 flex justify-center gap-3">
             <button onclick="displayFeaturedSets(); searchInput.value = ''; window.scrollTo({top: contentArea.offsetTop - 100, behavior: 'smooth'});" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium rounded-lg transition-colors">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                Back to Featured Sets
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                Home
+            </button>
+            <button onclick="displayBrowsePage(); searchInput.value = ''; window.scrollTo({top: contentArea.offsetTop - 100, behavior: 'smooth'});" class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-500 hover:bg-brand-600 text-white font-medium rounded-lg transition-colors shadow-lg shadow-brand-500/30">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                Browse All Sets
             </button>
         </div>
     `;
@@ -307,4 +311,151 @@ function filterByLang(lang) {
     
     // Optional: You could filter the setsData to only show sets that exist in that region 
     // if your data had region-exclusivity flags.
+}
+
+// --- Browse All Sets Page ---
+
+function displayBrowsePage() {
+    // Clear previous content
+    contentArea.innerHTML = '';
+    searchInput.value = '';
+
+    const container = document.createElement('div');
+    container.className = 'fade-in space-y-12';
+
+    // Page Header
+    const header = `
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-3">Browse All Sets</h2>
+            <p class="text-lg text-slate-500">Explore every Pokémon TCG set organized by series and language</p>
+        </div>
+    `;
+
+    // Language Tabs
+    const languageTabs = `
+        <div class="flex flex-wrap justify-center gap-3 mb-8 sticky top-20 bg-slate-50 py-4 z-10 border-y border-slate-200">
+            <button onclick="filterBrowseByLanguage('All')" class="browse-lang-tab active px-4 py-2 rounded-lg font-semibold text-sm transition-all" data-lang="All">
+                🌍 All Languages
+            </button>
+            <button onclick="filterBrowseByLanguage('German')" class="browse-lang-tab px-4 py-2 rounded-lg font-semibold text-sm transition-all" data-lang="German">
+                🇩🇪 German
+            </button>
+            <button onclick="filterBrowseByLanguage('English')" class="browse-lang-tab px-4 py-2 rounded-lg font-semibold text-sm transition-all" data-lang="English">
+                🇺🇸 English
+            </button>
+            <button onclick="filterBrowseByLanguage('Japanese')" class="browse-lang-tab px-4 py-2 rounded-lg font-semibold text-sm transition-all" data-lang="Japanese">
+                🇯🇵 Japanese
+            </button>
+            <button onclick="filterBrowseByLanguage('Korean')" class="browse-lang-tab px-4 py-2 rounded-lg font-semibold text-sm transition-all" data-lang="Korean">
+                🇰🇷 Korean
+            </button>
+        </div>
+    `;
+
+    // Organize sets by series
+    const scarletVioletSets = setsData.filter(set => set.series === 'Scarlet & Violet');
+    const swordShieldSets = setsData.filter(set => set.series === 'Sword & Shield');
+
+    // Build series sections
+    const scarletVioletSection = buildSeriesSection('Scarlet & Violet', scarletVioletSets, 'from-red-500 to-purple-600');
+    const swordShieldSection = buildSeriesSection('Sword & Shield', swordShieldSets, 'from-blue-600 to-red-600');
+
+    const contentWrapper = `<div id="browseSetsContent">${scarletVioletSection + swordShieldSection}</div>`;
+
+    container.innerHTML = header + languageTabs + contentWrapper;
+    contentArea.appendChild(container);
+
+    // Add tab styling
+    addBrowseTabStyles();
+
+    // Smooth scroll to content
+    window.scrollTo({ top: contentArea.offsetTop - 100, behavior: 'smooth' });
+}
+
+function buildSeriesSection(seriesName, sets, gradientColor) {
+    const setCards = sets.map(set => `
+        <div onclick="selectSet('${set.id}')" class="browse-set-card cursor-pointer bg-white rounded-xl border-2 border-slate-200 overflow-hidden hover:border-brand-500 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-german="${set.name.German.toLowerCase()}" data-english="${set.name.English.toLowerCase()}" data-japanese="${set.name.Japanese.toLowerCase()}" data-korean="${set.name.Korean.toLowerCase()}">
+            <div class="h-24 bg-gradient-to-br ${set.color} relative overflow-hidden flex items-center justify-center">
+                <div class="text-white text-4xl font-bold opacity-30">${set.symbol}</div>
+                <div class="absolute top-2 right-2 bg-white/20 backdrop-blur-sm px-2 py-1 rounded text-xs font-semibold text-white">
+                    ${set.releaseDate}
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="mb-3">
+                    <h4 class="font-bold text-slate-900 text-base mb-1 hover:text-brand-600 transition-colors">${set.name['English']}</h4>
+                    <div class="space-y-1">
+                        <p class="text-xs text-slate-500"><span class="font-medium">🇩🇪</span> ${set.name['German']}</p>
+                        <p class="text-xs text-slate-500"><span class="font-medium">🇯🇵</span> ${set.name['Japanese']}</p>
+                        ${set.name['Korean'] !== set.name['Japanese'] ? `<p class="text-xs text-slate-500"><span class="font-medium">🇰🇷</span> ${set.name['Korean']}</p>` : ''}
+                    </div>
+                </div>
+                <div class="flex items-center justify-between pt-3 border-t border-slate-100">
+                    <span class="text-xs text-slate-400">${set.totalCards} Cards</span>
+                    <span class="text-xs font-bold text-emerald-600">${set.topPulls[0].price}</span>
+                </div>
+            </div>
+        </div>
+    `).join('');
+
+    return `
+        <div class="browse-series-section">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="h-1 w-12 bg-gradient-to-r ${gradientColor} rounded-full"></div>
+                <h3 class="text-2xl font-bold text-slate-900">${seriesName}</h3>
+                <div class="h-1 flex-grow bg-slate-200 rounded-full"></div>
+                <span class="text-sm font-medium text-slate-400">${sets.length} Sets</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                ${setCards}
+            </div>
+        </div>
+    `;
+}
+
+function filterBrowseByLanguage(lang) {
+    // Update active tab
+    document.querySelectorAll('.browse-lang-tab').forEach(tab => {
+        tab.classList.remove('active');
+        if (tab.dataset.lang === lang) {
+            tab.classList.add('active');
+        }
+    });
+
+    // Filter cards
+    const allCards = document.querySelectorAll('.browse-set-card');
+    
+    if (lang === 'All') {
+        allCards.forEach(card => {
+            card.style.display = 'block';
+        });
+    } else {
+        allCards.forEach(card => {
+            const langAttr = `data-${lang.toLowerCase()}`;
+            card.style.display = 'block'; // Show all by default since all sets have all languages
+        });
+    }
+}
+
+function addBrowseTabStyles() {
+    // Add dynamic styles for tabs
+    const style = document.createElement('style');
+    style.textContent = `
+        .browse-lang-tab {
+            background: white;
+            color: #64748b;
+            border: 2px solid #e2e8f0;
+        }
+        .browse-lang-tab:hover {
+            border-color: #0ea5e9;
+            color: #0ea5e9;
+        }
+        .browse-lang-tab.active {
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+            color: white;
+            border-color: #0ea5e9;
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+        }
+    `;
+    document.head.appendChild(style);
 }

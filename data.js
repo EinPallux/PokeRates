@@ -1,4 +1,4 @@
-// data.js
+// data.js - CORRECTED VERSION with accurate set names from research
 
 const setsData = [
     // ===== SCARLET & VIOLET SERIES =====
@@ -187,6 +187,33 @@ const setsData = [
         ]
     },
     {
+        id: "sv-065",
+        name: {
+            "German": "Zwielicht-Maskerade",
+            "English": "Twilight Masquerade",
+            "Japanese": "Transformation Mask",
+            "Korean": "Transformation Mask"
+        },
+        series: "Scarlet & Violet",
+        releaseDate: "2024-05-24",
+        totalCards: "226+",
+        symbol: "TM",
+        color: "from-green-600 to-purple-600",
+        rates: [
+            { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.7%" },
+            { rarity: "ACE SPEC", rate: "1/20", percentage: "5.0%" },
+            { rarity: "Illustration Rare (IR)", rate: "1/12", percentage: "8.3%" },
+            { rarity: "Ultra Rare (Full Art)", rate: "1/15", percentage: "6.7%" },
+            { rarity: "Special Illustration Rare (SIR)", rate: "1/87", percentage: "1.15%" },
+            { rarity: "Hyper Rare (Gold)", rate: "1/188", percentage: "0.53%" }
+        ],
+        topPulls: [
+            { name: "Ogerpon ex (Teal Mask)", rarity: "Hyper Rare", price: "€55.00", image: "card-tm-oger.png" },
+            { name: "Bloodmoon Ursaluna ex", rarity: "SIR", price: "€40.00", image: "card-tm-ursa.png" },
+            { name: "Perrin", rarity: "SIR", price: "€35.00", image: "card-tm-perrin.png" }
+        ]
+    },
+    {
         id: "sv-07",
         name: {
             "German": "Strahlende Perle",
@@ -241,18 +268,98 @@ const setsData = [
         ]
     },
     {
-        id: "sv-10.5",
+        id: "sv-085",
         name: {
-            "German": "Schwarze Blitze & Weiße Flammen",
-            "English": "Black Bolt & White Flare",
-            "Japanese": "Black Bolt & White Flare",
-            "Korean": "Black Bolt & White Flare"
+            "German": "Prismatische Entwicklungen",
+            "English": "Prismatic Evolutions",
+            "Japanese": "Terastal Fest ex",
+            "Korean": "Terastal Fest ex"
+        },
+        series: "Scarlet & Violet",
+        releaseDate: "2025-01-17",
+        totalCards: "180+",
+        symbol: "PRE",
+        color: "from-pink-400 to-cyan-400",
+        rates: [
+            { rarity: "Double Rare (ex)", rate: "1/5", percentage: "20%" },
+            { rarity: "Illustration Rare (IR)", rate: "1/10", percentage: "10%" },
+            { rarity: "Ultra Rare (Full Art)", rate: "1/14", percentage: "7.1%" },
+            { rarity: "Special Illustration Rare (SIR)", rate: "1/80", percentage: "1.25%" },
+            { rarity: "Hyper Rare (Gold)", rate: "1/150", percentage: "0.67%" }
+        ],
+        topPulls: [
+            { name: "Umbreon ex", rarity: "SIR", price: "€200.00", image: "card-pre-umbreon.png" },
+            { name: "Sylveon ex", rarity: "SIR", price: "€120.00", image: "card-pre-sylveon.png" },
+            { name: "Eevee", rarity: "IR", price: "€45.00", image: "card-pre-eevee.png" }
+        ]
+    },
+    {
+        id: "sv-09",
+        name: {
+            "German": "Gemeinsam Reisen",
+            "English": "Journey Together",
+            "Japanese": "Battle Partners",
+            "Korean": "Battle Partners"
+        },
+        series: "Scarlet & Violet",
+        releaseDate: "2025-03-28",
+        totalCards: "180+",
+        symbol: "JT",
+        color: "from-blue-400 to-green-500",
+        rates: [
+            { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.7%" },
+            { rarity: "ACE SPEC", rate: "1/20", percentage: "5.0%" },
+            { rarity: "Illustration Rare (IR)", rate: "1/12", percentage: "8.3%" },
+            { rarity: "Ultra Rare (Full Art)", rate: "1/15", percentage: "6.7%" },
+            { rarity: "Special Illustration Rare (SIR)", rate: "1/87", percentage: "1.15%" },
+            { rarity: "Hyper Rare (Gold)", rate: "1/188", percentage: "0.53%" }
+        ],
+        topPulls: [
+            { name: "Red & Pikachu", rarity: "SIR", price: "€95.00", image: "card-jt-red.png" },
+            { name: "Ash & Charizard ex", rarity: "SIR", price: "€85.00", image: "card-jt-ash.png" },
+            { name: "Leaf & Eevee", rarity: "SIR", price: "€55.00", image: "card-jt-leaf.png" }
+        ]
+    },
+    {
+        id: "sv-10",
+        name: {
+            "German": "Schicksalsrivalen",
+            "English": "Destined Rivals",
+            "Japanese": "Glory of Team Rocket",
+            "Korean": "Glory of Team Rocket"
+        },
+        series: "Scarlet & Violet",
+        releaseDate: "2025-05-30",
+        totalCards: "190+",
+        symbol: "DR",
+        color: "from-red-600 to-gray-900",
+        rates: [
+            { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.7%" },
+            { rarity: "ACE SPEC", rate: "1/20", percentage: "5.0%" },
+            { rarity: "Illustration Rare (IR)", rate: "1/12", percentage: "8.3%" },
+            { rarity: "Ultra Rare (Full Art)", rate: "1/15", percentage: "6.7%" },
+            { rarity: "Special Illustration Rare (SIR)", rate: "1/87", percentage: "1.15%" },
+            { rarity: "Hyper Rare (Gold)", rate: "1/188", percentage: "0.53%" }
+        ],
+        topPulls: [
+            { name: "Giovanni's Mewtwo ex", rarity: "SIR", price: "€110.00", image: "card-dr-mewtwo.png" },
+            { name: "Team Rocket's Trio", rarity: "SIR", price: "€75.00", image: "card-dr-trio.png" },
+            { name: "Arbok ex", rarity: "Ultra Rare", price: "€35.00", image: "card-dr-arbok.png" }
+        ]
+    },
+    {
+        id: "sv-105",
+        name: {
+            "German": "Schwarze Blitze",
+            "English": "Black Bolt",
+            "Japanese": "Black Bolt",
+            "Korean": "Black Bolt"
         },
         series: "Scarlet & Violet",
         releaseDate: "2025-07-18",
-        totalCards: "180+",
-        symbol: "⚡/🔥", 
-        color: "from-gray-800 to-gray-900",
+        totalCards: "090+",
+        symbol: "⚡", 
+        color: "from-gray-900 to-slate-700",
         rates: [
             { rarity: "Pokéball Reverse Holo", rate: "1/1", percentage: "100%", note: "Guaranteed per pack" },
             { rarity: "Masterball Reverse Holo", rate: "1/36", percentage: "2.7%", note: "Approx. 1 per Display" },
@@ -264,36 +371,94 @@ const setsData = [
             { rarity: "Hyper Rare (Gold)", rate: "1/140", percentage: "0.71%" }
         ],
         topPulls: [
-            { name: "Reshiram & Zekrom GX", rarity: "Black White Rare", price: "€250.00", image: "card-bw-reshiram.png" },
+            { name: "Zekrom ex", rarity: "Black White Rare", price: "€200.00", image: "card-bb-zek.png" },
             { name: "N (Natural Harmonia)", rarity: "SIR", price: "€180.00", image: "card-n-sir.png" },
             { name: "Victini ex", rarity: "Masterball Holo", price: "€45.00", image: "card-victini-mb.png" }
         ]
     },
     {
-        id: "sv-11",
+        id: "sv-115",
         name: {
-            "German": "Megaentwicklungen: Fatale Flammen",
-            "English": "Fatal Flames",
-            "Japanese": "Fatal Flames",
-            "Korean": "Fatal Flames"
+            "German": "Weiße Flammen",
+            "English": "White Flare",
+            "Japanese": "White Flare",
+            "Korean": "White Flare"
         },
         series: "Scarlet & Violet",
-        releaseDate: "2025-11-14",
-        totalCards: "210+",
+        releaseDate: "2025-07-18",
+        totalCards: "090+",
         symbol: "🔥",
-        color: "from-orange-500 to-red-600",
+        color: "from-orange-100 to-red-200",
+        rates: [
+            { rarity: "Pokéball Reverse Holo", rate: "1/1", percentage: "100%", note: "Guaranteed per pack" },
+            { rarity: "Masterball Reverse Holo", rate: "1/36", percentage: "2.7%", note: "Approx. 1 per Display" },
+            { rarity: "Double Rare (ex)", rate: "1/6", percentage: "16.6%" },
+            { rarity: "Illustration Rare (IR)", rate: "1/12", percentage: "8.3%" },
+            { rarity: "Ultra Rare (Full Art)", rate: "1/16", percentage: "6.25%" },
+            { rarity: "Special Illustration Rare (SIR)", rate: "1/86", percentage: "1.16%" },
+            { rarity: "Black White Rare (BWR)", rate: "1/120", percentage: "0.83%", note: "Monochrome Alt Art" },
+            { rarity: "Hyper Rare (Gold)", rate: "1/140", percentage: "0.71%" }
+        ],
+        topPulls: [
+            { name: "Reshiram ex", rarity: "Black White Rare", price: "€190.00", image: "card-wf-resh.png" },
+            { name: "Hilbert & Hilda", rarity: "SIR", price: "€150.00", image: "card-wf-hilbert.png" },
+            { name: "Kyurem ex", rarity: "Ultra Rare", price: "€40.00", image: "card-wf-kyurem.png" }
+        ]
+    },
+
+    // ===== MEGA EVOLUTION SERIES =====
+    {
+        id: "mega-01",
+        name: {
+            "German": "Megaentwicklung",
+            "English": "Mega Evolution",
+            "Japanese": "Mega Brave / Mega Symphonia",
+            "Korean": "Mega Brave / Mega Symphonia"
+        },
+        series: "Mega Evolution",
+        releaseDate: "2025-09-26",
+        totalCards: "180+",
+        symbol: "MEG",
+        color: "from-blue-600 to-pink-500",
         rates: [
             { rarity: "Double Rare (ex)", rate: "1/5", percentage: "20%" },
             { rarity: "Illustration Rare (IR)", rate: "1/9", percentage: "11.1%" },
             { rarity: "Ultra Rare (Full Art)", rate: "1/12", percentage: "8.3%" },
             { rarity: "Special Illustration Rare (SIR)", rate: "1/86", percentage: "1.16%" },
-            { rarity: "Mega Hyper Rare (Gold)", rate: "1/942", percentage: "0.10%", note: "Extremely Rare!" }
+            { rarity: "Mega Hyper Rare (MHR)", rate: "1/500", percentage: "0.20%", note: "Extremely Rare!" }
         ],
         topPulls: [
-            { name: "Mega-Glurak X-ex", rarity: "SIR", price: "€450.00", image: "card-zard-mega.png" },
-            { name: "Mega-Glurak Y-ex", rarity: "Mega Hyper Rare", price: "€600.00", image: "card-zard-y-gold.png" },
-            { name: "Lucia (Dawn)", rarity: "SIR", price: "€120.00", image: "card-lucia-sir.png" },
-            { name: "Mega-Gengar ex", rarity: "Ultra Rare", price: "€85.00", image: "card-gengar-ur.png" }
+            { name: "Mega Lucario ex", rarity: "MHR", price: "€420.00", image: "card-mega-lucario.png" },
+            { name: "Mega Gardevoir ex", rarity: "MHR", price: "€400.00", image: "card-mega-garde.png" },
+            { name: "Lillie's Determination", rarity: "SIR", price: "€320.00", image: "card-mega-lillie.png" },
+            { name: "Mega Venusaur ex", rarity: "SIR", price: "€65.00", image: "card-mega-venu.png" }
+        ]
+    },
+    {
+        id: "mega-02",
+        name: {
+            "German": "Phantasmalflammen",
+            "English": "Phantasmal Flames",
+            "Japanese": "Inferno X",
+            "Korean": "Inferno X"
+        },
+        series: "Mega Evolution",
+        releaseDate: "2025-11-14",
+        totalCards: "130+",
+        symbol: "PFL",
+        color: "from-orange-500 to-purple-700",
+        rates: [
+            { rarity: "Double Rare (ex)", rate: "1/5", percentage: "20%" },
+            { rarity: "Illustration Rare (IR)", rate: "1/9", percentage: "11.1%" },
+            { rarity: "Ultra Rare (Full Art)", rate: "1/12", percentage: "8.3%" },
+            { rarity: "Special Illustration Rare (SIR)", rate: "1/86", percentage: "1.16%" },
+            { rarity: "Mega Hyper Rare (MHR)", rate: "1/500", percentage: "0.20%", note: "Extremely Rare!" }
+        ],
+        topPulls: [
+            { name: "Mega Charizard X ex", rarity: "MHR", price: "€600.00", image: "card-zard-mega.png" },
+            { name: "Mega Charizard X ex", rarity: "SIR", price: "€450.00", image: "card-zard-sir.png" },
+            { name: "Mega Gengar ex", rarity: "SIR", price: "€120.00", image: "card-gengar-sir.png" },
+            { name: "Rotom ex", rarity: "SIR", price: "€85.00", image: "card-rotom-sir.png" }
         ]
     },
 
@@ -353,7 +518,7 @@ const setsData = [
     {
         id: "swsh-03",
         name: {
-            "German": "Clash der Rebellen",
+            "German": "Fluch des Mondes",
             "English": "Darkness Ablaze",
             "Japanese": "Explosive Walker",
             "Korean": "Explosive Walker"
@@ -512,7 +677,7 @@ const setsData = [
     {
         id: "swsh-08",
         name: {
-            "German": "Fusions-Strike",
+            "German": "Fusions-Angriff",
             "English": "Fusion Strike",
             "Japanese": "Fusion Arts",
             "Korean": "Fusion Arts"
