@@ -404,22 +404,14 @@ function buildSeriesSection(seriesName, sets, gradientColor) {
                         <div class="text-white text-4xl font-bold opacity-30 select-none">${set.symbol}</div>
                     </div>
                 `}
-
-                <div class="relative z-10">
-                    ${set.symbolImage ? 
-                        `<img src="${set.symbolImage}" alt="${set.symbol}" class="h-16 w-16 object-contain drop-shadow-md" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div class="text-white text-4xl font-bold opacity-50" style="display:none;">${set.symbol}</div>` 
-                        : '' // Removed overlay text here as requested
-                    }
                 </div>
-                
-                <div class="absolute top-2 right-2 bg-white/20 backdrop-blur-sm px-2 py-1 rounded text-xs font-semibold text-white relative z-10 shadow-sm">
-                    ${formatDate(set.releaseDate)}
-                </div>
-            </div>
             
             <div class="p-4">
                 <div class="mb-3">
+                    <div class="text-xs font-medium text-slate-500 mb-1 flex items-center gap-1">
+                        📅 ${formatDate(set.releaseDate)}
+                    </div>
+                    
                     <h4 class="font-bold text-slate-900 text-base mb-1 hover:text-brand-600 transition-colors">${set.name['English']}</h4>
                     <div class="space-y-1">
                         <p class="text-xs text-slate-500"><span class="font-medium">🇩🇪</span> ${set.name['German']}</p>
