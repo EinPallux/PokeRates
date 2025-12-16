@@ -255,8 +255,9 @@ function renderSetDetails(set) {
             
             <div class="mt-4 text-center">
                 <h4 class="font-bold text-slate-900 leading-tight">${card.name}</h4>
-                <div class="text-xs text-slate-500 mt-1 mb-2">${card.rarity}</div>
-                <div class="inline-block bg-emerald-50 text-emerald-700 text-sm font-bold px-3 py-1 rounded-lg border border-emerald-100">
+                <div class="text-xs text-slate-500 mt-1">${card.rarity}</div>
+                ${card.cardNumber ? `<div class="text-xs text-slate-400 font-mono mt-0.5">#${card.cardNumber}</div>` : ''}
+                <div class="inline-block bg-emerald-50 text-emerald-700 text-sm font-bold px-3 py-1.5 rounded-lg border border-emerald-100 mt-2">
                     ${card.price}
                 </div>
             </div>
@@ -352,15 +353,17 @@ function displayBrowsePage() {
         </div>
     `;
 
-    // Organize sets by series
-    const scarletVioletSets = setsData.filter(set => set.series === 'Scarlet & Violet');
-    const swordShieldSets = setsData.filter(set => set.series === 'Sword & Shield');
+    // Organize sets by series and sort by newest first
+    const megaSets = setsData.filter(set => set.series === 'Mega Evolution').sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
+    const scarletVioletSets = setsData.filter(set => set.series === 'Scarlet & Violet').sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
+    const swordShieldSets = setsData.filter(set => set.series === 'Sword & Shield').sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
 
-    // Build series sections
+    // Build series sections (newest series first)
+    const megaSection = buildSeriesSection('Mega Evolution', megaSets, 'from-blue-600 to-pink-500');
     const scarletVioletSection = buildSeriesSection('Scarlet & Violet', scarletVioletSets, 'from-red-500 to-purple-600');
     const swordShieldSection = buildSeriesSection('Sword & Shield', swordShieldSets, 'from-blue-600 to-red-600');
 
-    const contentWrapper = `<div id="browseSetsContent">${scarletVioletSection + swordShieldSection}</div>`;
+    const contentWrapper = `<div id="browseSetsContent">${megaSection + scarletVioletSection + swordShieldSection}</div>`;
 
     container.innerHTML = header + languageTabs + contentWrapper;
     contentArea.appendChild(container);
@@ -376,7 +379,12 @@ function buildSeriesSection(seriesName, sets, gradientColor) {
     const setCards = sets.map(set => `
         <div onclick="selectSet('${set.id}')" class="browse-set-card cursor-pointer bg-white rounded-xl border-2 border-slate-200 overflow-hidden hover:border-brand-500 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-german="${set.name.German.toLowerCase()}" data-english="${set.name.English.toLowerCase()}" data-japanese="${set.name.Japanese.toLowerCase()}" data-korean="${set.name.Korean.toLowerCase()}">
             <div class="h-24 bg-gradient-to-br ${set.color} relative overflow-hidden flex items-center justify-center">
-                <div class="text-white text-4xl font-bold opacity-30">${set.symbol}</div>
+                ${set.symbolImage ? 
+                    `<img src="${set.symbolImage}" alt="${set.symbol}" class="h-16 w-16 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                     <div class="text-white text-4xl font-bold opacity-30" style="display:none;">${set.symbol}</div>` 
+                    : 
+                    `<div class="text-white text-4xl font-bold opacity-30">${set.symbol}</div>`
+                }
                 <div class="absolute top-2 right-2 bg-white/20 backdrop-blur-sm px-2 py-1 rounded text-xs font-semibold text-white">
                     ${set.releaseDate}
                 </div>
