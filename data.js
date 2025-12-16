@@ -1,7 +1,7 @@
-// data.js - UPDATED PRICES (RAW, PSA 9, PSA 9.5, PSA 10)
+// data.js - UPDATED PRICES (RAW, PSA 9, PSA 9.5, PSA 10) & ALL BANNERS
 
 const setsData = [
-    // ===== MEGA EVOLUTION SERIES ===== (FUTURE/ESTIMATED)
+    // ===== MEGA EVOLUTION SERIES ===== (CUSTOM / FAN SETS WITH MARKET DATA)
     {
         id: "mega-03",
         name: {
@@ -26,21 +26,21 @@ const setsData = [
         ],
         topPulls: [
             { 
-                name: "Charizard MHR?", 
+                name: "Charizard MHR", 
                 rarity: "MHR", 
                 prices: { raw: "TBD", psa9: "TBD", psa95: "TBD", psa10: "TBD" },
                 cardNumber: "???", 
                 image: "card-zard-mhr.png" 
             },
             { 
-                name: "Charizard SIR?", 
+                name: "Charizard SIR", 
                 rarity: "SIR", 
                 prices: { raw: "TBD", psa9: "TBD", psa95: "TBD", psa10: "TBD" },
                 cardNumber: "???", 
                 image: "card-zard-sir.png" 
             },
             { 
-                name: "Gengar SIR?", 
+                name: "Gengar SIR", 
                 rarity: "SIR", 
                 prices: { raw: "TBD", psa9: "TBD", psa95: "TBD", psa10: "TBD" },
                 cardNumber: "???", 
@@ -74,21 +74,21 @@ const setsData = [
             { 
                 name: "Mega Charizard X ex", 
                 rarity: "MHR", 
-                prices: { raw: "€341.00", psa9: "TBD", psa95: "TBD", psa10: "TBD" }, // User specified
+                prices: { raw: "€344.91", psa9: "N/A", psa95: "N/A", psa10: "N/A" }, 
                 cardNumber: "130/094", 
                 image: "card-zard-mhr.png" 
             },
             { 
                 name: "Mega Charizard X ex", 
                 rarity: "SIR", 
-                prices: { raw: "TBD", psa9: "TBD", psa95: "TBD", psa10: "TBD" },
+                prices: { raw: "€549.00", psa9: "€760.00", psa95: "€1087.00", psa10: "€2100.00" },
                 cardNumber: "125/094", 
                 image: "card-zard-sir.png" 
             },
             { 
                 name: "Mega Gengar ex", 
                 rarity: "SIR", 
-                prices: { raw: "TBD", psa9: "TBD", psa95: "TBD", psa10: "TBD" },
+                prices: { raw: "€120.00", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
                 cardNumber: "126/094", 
                 image: "card-gengar-sir.png" 
             }
@@ -120,21 +120,21 @@ const setsData = [
             { 
                 name: "Mega Lucario ex", 
                 rarity: "MHR", 
-                prices: { raw: "TBD", psa9: "TBD", psa95: "TBD", psa10: "TBD" },
+                prices: { raw: "€287.23", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
                 cardNumber: "188/159", 
                 image: "card-mega-lucario.png" 
             },
             { 
                 name: "Mega Gardevoir ex", 
                 rarity: "MHR", 
-                prices: { raw: "TBD", psa9: "TBD", psa95: "TBD", psa10: "TBD" },
+                prices: { raw: "€208.80", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
                 cardNumber: "187/159", 
                 image: "card-mega-garde.png" 
             },
             { 
                 name: "Lillie's Determination", 
                 rarity: "SIR", 
-                prices: { raw: "TBD", psa9: "TBD", psa95: "TBD", psa10: "TBD" },
+                prices: { raw: "€320.00", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
                 cardNumber: "186/159", 
                 image: "card-mega-lillie.png" 
             }
@@ -253,16 +253,16 @@ const setsData = [
             },
             { 
                 name: "Latias ex", 
-                rarity: "SIR", 
-                prices: { raw: "N/A", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
-                cardNumber: "235/191", 
+                rarity: "Double Rare", 
+                prices: { raw: "€4.00", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
+                cardNumber: "076/191", 
                 image: "card-ss-latias.png" 
             },
             { 
                 name: "Lisia's Appeal", 
                 rarity: "SIR", 
-                prices: { raw: "N/A", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
-                cardNumber: "242/191", 
+                prices: { raw: "€40.00", psa9: "€69.00", psa95: "N/A", psa10: "N/A" },
+                cardNumber: "246/191", 
                 image: "card-ss-lisia.png" 
             }
         ]
@@ -298,16 +298,16 @@ const setsData = [
                 image: "card-sc-tera.png" 
             },
             { 
-                name: "Galarian Moltres ex", 
+                name: "Galvantula ex", 
                 rarity: "SIR", 
-                prices: { raw: "N/A", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
+                prices: { raw: "€17.25", psa9: "€19.74", psa95: "€27.50", psa10: "€71.00" },
                 cardNumber: "168/142", 
                 image: "card-sc-molt.png" 
             },
             { 
                 name: "Lacey", 
                 rarity: "SIR", 
-                prices: { raw: "N/A", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
+                prices: { raw: "€16.42", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
                 cardNumber: "172/142", 
                 image: "card-sc-lacey.png" 
             }
@@ -346,14 +346,14 @@ const setsData = [
             { 
                 name: "Carmine", 
                 rarity: "SIR", 
-                prices: { raw: "€55.00", psa9: "€75.00", psa95: "N/A", psa10: "€156.00" },
+                prices: { raw: "€56.00", psa9: "€75.00", psa95: "N/A", psa10: "€156.00" },
                 cardNumber: "217/167", 
                 image: "card-tm-carmine.png" 
             },
             { 
                 name: "Perrin", 
                 rarity: "SIR", 
-                prices: { raw: "N/A", psa9: "€95.00", psa95: "N/A", psa10: "€222.00" },
+                prices: { raw: "€40.00", psa9: "€95.00", psa95: "N/A", psa10: "€222.00" },
                 cardNumber: "215/167", 
                 image: "card-tm-perrin.png" 
             }
@@ -391,7 +391,7 @@ const setsData = [
             { 
                 name: "Raging Bolt ex", 
                 rarity: "SIR", 
-                prices: { raw: "N/A", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
+                prices: { raw: "€66.47", psa9: "€71.00", psa95: "€132.50", psa10: "€208.93" },
                 cardNumber: "208/162", 
                 image: "card-tf-bolt.png" 
             }
@@ -422,21 +422,21 @@ const setsData = [
             { 
                 name: "Charizard ex (Shiny)", 
                 rarity: "SIR", 
-                prices: { raw: "€115.00", psa9: "€130.00", psa95: "€150.00", psa10: "€258.00" },
+                prices: { raw: "€115.00", psa9: "€234.00", psa95: "€255.00", psa10: "€625.00" },
                 cardNumber: "234/091", 
                 image: "card-pf-zard.png" 
             },
             { 
                 name: "Mew ex (Shiny)", 
                 rarity: "SIR", 
-                prices: { raw: "N/A", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
+                prices: { raw: "€482.94", psa9: "€514.72", psa95: "N/A", psa10: "€1475.50" },
                 cardNumber: "232/091", 
                 image: "card-pf-mew.png" 
             },
             { 
                 name: "Gardevoir ex (Shiny)", 
                 rarity: "SIR", 
-                prices: { raw: "N/A", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
+                prices: { raw: "€97.43", psa9: "€112.61", psa95: "€118.88", psa10: "€277.50" },
                 cardNumber: "233/091", 
                 image: "card-pf-garde.png" 
             }
@@ -474,7 +474,7 @@ const setsData = [
             { 
                 name: "Iron Valiant ex", 
                 rarity: "SIR", 
-                prices: { raw: "N/A", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
+                prices: { raw: "€20.48", psa9: "€30.50", psa95: "€46.65", psa10: "€118.79" },
                 cardNumber: "249/182", 
                 image: "card-pr-valiant.png" 
             }
@@ -828,7 +828,7 @@ const setsData = [
             { 
                 name: "Machamp V", 
                 rarity: "Alternate Art", 
-                prices: { raw: "€117.31", psa9: "€200.00", psa95: "N/A", psa10: "N/A" },
+                prices: { raw: "€117.31", psa9: "€157.03", psa95: "N/A", psa10: "€351.88" },
                 cardNumber: "172/189", 
                 image: "card-asr-machamp.png" 
             }
@@ -857,7 +857,7 @@ const setsData = [
             { 
                 name: "Charizard V", 
                 rarity: "Alternate Art", 
-                prices: { raw: "€160.00", psa9: "€265.00", psa95: "N/A", psa10: "€771.00" },
+                prices: { raw: "€215.05", psa9: "€265.00", psa95: "N/A", psa10: "€771.00" },
                 cardNumber: "154/172", 
                 image: "card-brs-zard.png" 
             }
@@ -885,7 +885,7 @@ const setsData = [
             { 
                 name: "Blaziken VMAX", 
                 rarity: "Alternate Art", 
-                prices: { raw: "€200.00", psa9: "€330.00", psa95: "N/A", psa10: "N/A" },
+                prices: { raw: "€371.00", psa9: "€330.00", psa95: "N/A", psa10: "€600.00" },
                 cardNumber: "201/198", 
                 image: "card-cre-blaziken.png" 
             }
@@ -913,7 +913,7 @@ const setsData = [
             { 
                 name: "Tyranitar V", 
                 rarity: "Alternate Art", 
-                prices: { raw: "€110.00", psa9: "€219.00", psa95: "N/A", psa10: "€660.00" },
+                prices: { raw: "€181.88", psa9: "€219.09", psa95: "N/A", psa10: "€660.00" },
                 cardNumber: "155/163", 
                 image: "card-bst-ttar.png" 
             }
@@ -941,7 +941,7 @@ const setsData = [
             { 
                 name: "Charizard VMAX", 
                 rarity: "Shiny Vault", 
-                prices: { raw: "€110.00", psa9: "€125.00", psa95: "€198.00", psa10: "€258.00" },
+                prices: { raw: "€112.97", psa9: "€125.25", psa95: "€198.25", psa10: "€258.50" },
                 cardNumber: "SV107/SV122", 
                 image: "card-shf-zard.png" 
             }
@@ -970,7 +970,7 @@ const setsData = [
             { 
                 name: "Pikachu VMAX", 
                 rarity: "Rainbow Rare", 
-                prices: { raw: "€132.62", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
+                prices: { raw: "€132.62", psa9: "€150.00", psa95: "N/A", psa10: "€250.00" },
                 cardNumber: "188/185", 
                 image: "card-viv-pika.png" 
             }
@@ -998,7 +998,7 @@ const setsData = [
             { 
                 name: "Charizard VMAX", 
                 rarity: "Ultra Rare", 
-                prices: { raw: "€35.00", psa9: "€47.50", psa95: "€74.00", psa10: "€125.00" },
+                prices: { raw: "€41.40", psa9: "€47.50", psa95: "€74.00", psa10: "€125.40" },
                 cardNumber: "020/189", 
                 image: "card-daa-zard.png" 
             }
@@ -1026,7 +1026,7 @@ const setsData = [
             { 
                 name: "Boss's Orders", 
                 rarity: "Full Art", 
-                prices: { raw: "€35.00", psa9: "€52.00", psa95: "N/A", psa10: "€135.00" },
+                prices: { raw: "€47.66", psa9: "€52.00", psa95: "N/A", psa10: "€135.00" },
                 cardNumber: "189/192", 
                 image: "card-rcl-boss.png" 
             }
@@ -1054,7 +1054,7 @@ const setsData = [
             { 
                 name: "Marnie", 
                 rarity: "Full Art", 
-                prices: { raw: "€35.00", psa9: "N/A", psa95: "N/A", psa10: "N/A" },
+                prices: { raw: "€35.00", psa9: "€55.00", psa95: "N/A", psa10: "€120.00" },
                 cardNumber: "200/202", 
                 image: "card-ssh-marnie.png" 
             }
