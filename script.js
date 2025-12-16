@@ -7,7 +7,6 @@ const searchResults = document.getElementById('searchResults');
 const contentArea = document.getElementById('contentArea');
 
 // --- Initialization ---
-
 document.addEventListener('DOMContentLoaded', () => {
     // Event Listeners
     searchInput.addEventListener('input', (e) => handleSearch(e.target.value));
@@ -36,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // --- Helper Functions ---
-
 function formatDate(dateString) {
     if (!dateString) return '';
     const parts = dateString.split('-');
@@ -45,7 +43,6 @@ function formatDate(dateString) {
 }
 
 // --- Featured Sets Display ---
-
 function displayFeaturedSets() {
     const initialState = document.getElementById('initialState');
     
@@ -95,7 +92,7 @@ function displayFeaturedSets() {
                     <span class="text-xs font-medium text-slate-600">${formatDate(set.releaseDate)}</span>
                 </div>
                 <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
-                    <span class="text-xs text-slate-500">Chase Card:</span>
+                    <span class="text-xs text-slate-500">Top Chase:</span>
                     <span class="text-sm font-bold text-emerald-600">${set.topPulls[0].prices.raw}</span>
                 </div>
             </div>
@@ -114,7 +111,6 @@ function displayFeaturedSets() {
         </div>
     `;
 
-    // Replace initial state with featured sets
     if (initialState) {
         initialState.remove();
     }
@@ -123,7 +119,6 @@ function displayFeaturedSets() {
 }
 
 // --- Search Logic ---
-
 function handleSearch(query) {
     currentSearchTerm = query.toLowerCase().trim();
     
@@ -132,7 +127,6 @@ function handleSearch(query) {
         return;
     }
 
-    // Filter sets based on input matching ANY language name
     const matches = setsData.filter(set => {
         return Object.values(set.name).some(name => 
             name.toLowerCase().includes(currentSearchTerm)
@@ -151,7 +145,6 @@ function renderSearchResults(matches) {
     }
 
     matches.forEach(set => {
-        // Determine which language matched best to show as primary, or default to English
         const displayLang = getBestMatchLang(set, currentSearchTerm) || 'English';
         const displayName = set.name[displayLang];
         const subText = displayLang !== 'English' ? set.name['English'] : set.name['German'];
@@ -174,7 +167,6 @@ function renderSearchResults(matches) {
     searchResults.classList.remove('hidden');
 }
 
-// Helper: Find which language key matched the search term
 function getBestMatchLang(set, term) {
     for (const [lang, name] of Object.entries(set.name)) {
         if (name.toLowerCase().includes(term)) return lang;
@@ -182,30 +174,24 @@ function getBestMatchLang(set, term) {
     return 'English';
 }
 
-// Helper: Bold the matching part of the text
 function highlightMatch(text, term) {
     const regex = new RegExp(`(${term})`, 'gi');
     return text.replace(regex, '<span class="text-brand-600 font-bold">$1</span>');
 }
 
 // --- Main View Logic ---
-
 function selectSet(setId) {
     const set = setsData.find(s => s.id === setId);
     if (!set) return;
 
-    // Hide search results and clear input
     searchResults.classList.add('hidden');
-    searchInput.value = set.name['English']; // Set input to selected name
-
+    searchInput.value = set.name['English']; 
     renderSetDetails(set);
 }
 
 function renderSetDetails(set) {
-    // Clear previous content
     contentArea.innerHTML = '';
 
-    // Create Container
     const container = document.createElement('div');
     container.className = 'fade-in space-y-8';
 
@@ -264,12 +250,12 @@ function renderSetDetails(set) {
         </div>
     `;
 
-    // 3. Top Pulls Section (Cards) - UPDATED FOR PRICE GRID
+    // 3. Top Pulls Section - UPDATED FOR PRICE GRID
     const topPullsCards = set.topPulls.map(card => `
         <div class="group relative bg-white rounded-xl shadow-card overflow-hidden border border-slate-100 p-4">
-            <div class="aspect-[3/4] rounded-lg overflow-hidden shadow-sm bg-slate-200 card-placeholder border border-slate-200 mb-4 mx-auto w-3/4">
-                <div class="absolute inset-0 flex items-center justify-center text-slate-300 font-bold text-2xl opacity-20 select-none">IMG</div>
-            </div>
+            <div class="aspect-[3/4] rounded-lg overflow-hidden shadow-sm bg-slate-200 card-placeholder border border-slate-200 mb-4 mx-auto w-3/4 relative">
+                 <div class="absolute inset-0 flex items-center justify-center text-slate-300 font-bold text-2xl opacity-20 select-none">IMG</div>
+                 </div>
             
             <div class="text-center mb-4">
                 <h4 class="font-bold text-slate-900 leading-tight">${card.name}</h4>
@@ -279,7 +265,7 @@ function renderSetDetails(set) {
             
             <div class="grid grid-cols-2 gap-2 text-xs">
                 <div class="bg-slate-50 p-2 rounded border border-slate-100">
-                    <div class="text-slate-400 mb-0.5">Raw</div>
+                    <div class="text-slate-400 mb-0.5">Raw (30d)</div>
                     <div class="font-bold text-emerald-600">${card.prices.raw}</div>
                 </div>
                  <div class="bg-slate-50 p-2 rounded border border-slate-100">
@@ -324,33 +310,20 @@ function renderSetDetails(set) {
         </div>
     `;
 
-    // Assemble DOM
     container.innerHTML = header + ratesSection + topPullsSection + backButton;
     contentArea.appendChild(container);
     
-    // Smooth scroll to content
     window.scrollTo({ top: contentArea.offsetTop - 100, behavior: 'smooth' });
 }
 
-// --- Quick Filters ---
-
-function filterByLang(lang) {
-    searchInput.focus();
-    searchInput.placeholder = `Search for ${lang} sets...`;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
 // --- Browse All Sets Page ---
-
 function displayBrowsePage() {
-    // Clear previous content
     contentArea.innerHTML = '';
     searchInput.value = '';
 
     const container = document.createElement('div');
     container.className = 'fade-in space-y-12';
 
-    // Page Header
     const header = `
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-3">Browse All Sets</h2>
@@ -358,7 +331,6 @@ function displayBrowsePage() {
         </div>
     `;
 
-    // Language Tabs
     const languageTabs = `
         <div class="flex flex-wrap justify-center gap-3 mb-8 sticky top-20 bg-slate-50 py-4 z-10 border-y border-slate-200">
             <button onclick="filterBrowseByLanguage('All')" class="browse-lang-tab active px-4 py-2 rounded-lg font-semibold text-sm transition-all" data-lang="All">
@@ -379,31 +351,25 @@ function displayBrowsePage() {
         </div>
     `;
 
-    // Organize sets by series and sort by newest first
     const megaSets = setsData.filter(set => set.series === 'Mega Evolution').sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
     const scarletVioletSets = setsData.filter(set => set.series === 'Scarlet & Violet').sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
     const swordShieldSets = setsData.filter(set => set.series === 'Sword & Shield').sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
 
-    // Build series sections (newest series first)
     const megaSection = buildSeriesSection('Mega Evolution', megaSets, 'from-blue-600 to-pink-500');
     const scarletVioletSection = buildSeriesSection('Scarlet & Violet', scarletVioletSets, 'from-red-500 to-purple-600');
     const swordShieldSection = buildSeriesSection('Sword & Shield', swordShieldSets, 'from-blue-600 to-red-600');
 
-    // Added space-y-24 here for more gap between eras
     const contentWrapper = `<div id="browseSetsContent" class="space-y-24">${megaSection + scarletVioletSection + swordShieldSection}</div>`;
 
     container.innerHTML = header + languageTabs + contentWrapper;
     contentArea.appendChild(container);
 
-    // Add tab styling
     addBrowseTabStyles();
-
-    // Smooth scroll to content
     window.scrollTo({ top: contentArea.offsetTop - 100, behavior: 'smooth' });
 }
 
 function buildSeriesSection(seriesName, sets, gradientColor) {
-    if (sets.length === 0) return ''; // Don't show empty sections
+    if (sets.length === 0) return '';
 
     const setCards = sets.map(set => `
         <div onclick="selectSet('${set.id}')" class="browse-set-card group cursor-pointer bg-white rounded-xl border-2 border-slate-200 overflow-hidden hover:border-brand-500 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-german="${set.name.German.toLowerCase()}" data-english="${set.name.English.toLowerCase()}" data-japanese="${set.name.Japanese.toLowerCase()}" data-korean="${set.name.Korean.toLowerCase()}">
@@ -455,7 +421,6 @@ function buildSeriesSection(seriesName, sets, gradientColor) {
 }
 
 function filterBrowseByLanguage(lang) {
-    // Update active tab
     document.querySelectorAll('.browse-lang-tab').forEach(tab => {
         tab.classList.remove('active');
         if (tab.dataset.lang === lang) {
@@ -463,23 +428,16 @@ function filterBrowseByLanguage(lang) {
         }
     });
 
-    // Filter cards
     const allCards = document.querySelectorAll('.browse-set-card');
     
     if (lang === 'All') {
-        allCards.forEach(card => {
-            card.style.display = 'block';
-        });
+        allCards.forEach(card => card.style.display = 'block');
     } else {
-        allCards.forEach(card => {
-            const langAttr = `data-${lang.toLowerCase()}`;
-            card.style.display = 'block'; // Show all by default since all sets have all languages
-        });
+        allCards.forEach(card => card.style.display = 'block');
     }
 }
 
 function addBrowseTabStyles() {
-    // Add dynamic styles for tabs
     const style = document.createElement('style');
     style.textContent = `
         .browse-lang-tab {
