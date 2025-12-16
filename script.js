@@ -30,7 +30,85 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // Display featured sets on page load
+    displayFeaturedSets();
 });
+
+// --- Featured Sets Display ---
+
+function displayFeaturedSets() {
+    const initialState = document.getElementById('initialState');
+    
+    // Select featured sets: Mix of popular/newest sets across series
+    const featuredSetIds = [
+        'sv-11',      // Fatal Flames (newest, Mega Evolution)
+        'sv-08',      // Surging Sparks (popular Pikachu)
+        'sv-151',     // 151 (iconic)
+        'swsh-07',    // Evolving Skies (highly sought after)
+        'swsh-09',    // Brilliant Stars (Charizard Alt Art)
+        'swsh-12.5'   // Crown Zenith (recent SWSH)
+    ];
+
+    const featuredSets = setsData.filter(set => featuredSetIds.includes(set.id));
+    
+    // Build featured sets section
+    const container = document.createElement('div');
+    container.className = 'fade-in';
+    
+    const header = `
+        <div class="text-center mb-8">
+            <h2 class="text-2xl font-bold text-slate-900 mb-2">Featured Sets</h2>
+            <p class="text-slate-500">Explore pull rates for the most popular Pokémon TCG sets</p>
+        </div>
+    `;
+
+    const setCards = featuredSets.map(set => `
+        <div onclick="selectSet('${set.id}')" class="group cursor-pointer bg-white rounded-xl border border-slate-200 overflow-hidden shadow-soft hover:shadow-card transition-all duration-300 transform hover:-translate-y-1">
+            <div class="h-32 bg-gradient-to-br ${set.color} relative overflow-hidden">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="text-white text-5xl font-bold opacity-20">${set.symbol}</div>
+                </div>
+                <div class="absolute top-3 left-3 bg-white/20 backdrop-blur-sm px-2 py-1 rounded text-xs font-semibold text-white">
+                    ${set.series}
+                </div>
+                <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+            </div>
+            <div class="p-5">
+                <h3 class="font-bold text-slate-900 text-lg mb-1 group-hover:text-brand-600 transition-colors">${set.name['English']}</h3>
+                <p class="text-xs text-slate-500 mb-3">${set.name['German']}</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-xs text-slate-400">${set.totalCards} Cards</span>
+                    <span class="text-xs font-medium text-slate-600">${set.releaseDate}</span>
+                </div>
+                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
+                    <span class="text-xs text-slate-500">Chase Card:</span>
+                    <span class="text-sm font-bold text-emerald-600">${set.topPulls[0].price}</span>
+                </div>
+            </div>
+        </div>
+    `).join('');
+
+    container.innerHTML = header + `
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            ${setCards}
+        </div>
+        <div class="text-center mt-12">
+            <p class="text-slate-400 text-sm mb-4">Looking for a specific set?</p>
+            <button onclick="document.getElementById('searchInput').focus(); window.scrollTo({top: 0, behavior: 'smooth'});" class="inline-flex items-center gap-2 px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-xl transition-colors shadow-lg shadow-brand-500/30">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                Search All Sets
+            </button>
+        </div>
+    `;
+
+    // Replace initial state with featured sets
+    if (initialState) {
+        initialState.remove();
+    }
+    contentArea.innerHTML = '';
+    contentArea.appendChild(container);
+}
 
 // --- Search Logic ---
 
@@ -197,8 +275,18 @@ function renderSetDetails(set) {
         </div>
     `;
 
+    // 4. Back to Featured Sets Button
+    const backButton = `
+        <div class="pt-8 text-center">
+            <button onclick="displayFeaturedSets(); searchInput.value = ''; window.scrollTo({top: contentArea.offsetTop - 100, behavior: 'smooth'});" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium rounded-lg transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Back to Featured Sets
+            </button>
+        </div>
+    `;
+
     // Assemble DOM
-    container.innerHTML = header + ratesSection + topPullsSection;
+    container.innerHTML = header + ratesSection + topPullsSection + backButton;
     contentArea.appendChild(container);
     
     // Smooth scroll to content
